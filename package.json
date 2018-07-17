@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/TomatoToaster/Website/issues"
   },
-  "homepage": "https://github.com/TomatoToaster/Website#readme",
+  "homepage": "http://tomatotoaster.com",
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
