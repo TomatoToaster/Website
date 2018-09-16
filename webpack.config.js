@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const APP_DIR = path.resolve(__dirname, 'dist');
 const SRC_DIR = path.resolve(__dirname, 'src');
+const PUB_DIR = path.resolve(__dirname, 'public');
 
 const config = {
   entry: `${SRC_DIR}/index.js`,
@@ -41,6 +42,9 @@ const config = {
       filename: `${APP_DIR}/index.html`,
     }),
   ],
+  devServer: {
+	contentBase: PUB_DIR,
+  }
 };
 
 module.exports = config;
