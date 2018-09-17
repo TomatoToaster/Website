@@ -6,23 +6,23 @@ const SRC_DIR = path.resolve(__dirname, 'src');
 const PUB_DIR = path.resolve(__dirname, 'public');
 
 const config = {
-  entry: `${SRC_DIR}/index.js`,
-  output: {
-    path: APP_DIR,
-    filename: 'bundle.js',
-  },
-  mode: 'production',
-  module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        use: [
+	entry: `${SRC_DIR}/index.js`,
+	output: {
+		path: APP_DIR,
+		filename: 'bundle.js',
+	},
+	mode: 'production',
+	module: {
+		rules: [
+			{
+				test: /\.(js|jsx)?$/,
+				use: [
 							{
 								loader: 'babel-loader',
-          				options: {
-          					presets: ['react']
-		  						}
-		  				}
+									options: {
+										presets: ['react']
+									}
+							}
 				],
         exclude: /node_modules/
       },
@@ -30,7 +30,7 @@ const config = {
         test: /\.(s*)css$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
         exclude: /node_modules/
-      },
+			},
     ],
   },
   plugins: [
@@ -44,7 +44,7 @@ const config = {
   ],
   devServer: {
 	contentBase: PUB_DIR,
-  }
+	},
 };
 
 module.exports = config;
