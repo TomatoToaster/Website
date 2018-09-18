@@ -9,7 +9,7 @@ class Contact extends Component {
         <p>Name: Amal Nazeem</p>
         <p>Email: amalnazeem@gmail.com</p>
         <p>Github: https://github.com/TomatoToaster</p>
-        <a href="/pic.jpg" target="_blank"><p>Resume</p></a>
+        <p>Resume: <a href="/Resume.pdf" target="_blank">Click Here</a></p>
       </div>
     );
   }
