@@ -5,9 +5,10 @@ import {
   BrowserRouter,
   Switch
 } from 'react-router-dom';
-import Home from './Home.jsx'
-import Stuff from './Stuff.jsx'
-import Contact from './Contact.jsx'
+import Home from './Home.jsx';
+import Stuff from './Stuff.jsx';
+import Contact from './Contact.jsx';
+import Tomato from './Tomato.jsx';
 
 
 /**
@@ -24,12 +25,14 @@ class App extends Component {
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/stuff">Stuff</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
+            <li><NavLink to="/tomato">Tomato Version</NavLink></li>
           </ul>
           <div className="content">
             <Switch>
               <Route exact path="/" component={Home}/>
               <Route path="/stuff" component={Stuff}/>
               <Route path="/contact" component={Contact}/>
+              <Route path="/tomato" component={Tomato}/>
             </Switch>
           </div>
         </div>

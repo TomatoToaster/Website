@@ -1,6 +1,6 @@
 body {
   background-color: #DD6632;
-  padding: 20px;
+  padding: 2em;
   margin: 0;
 }
 h1, h2, p, ul, li {
@@ -19,17 +19,55 @@ ul.header li a {
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
-  padding: 20px;
+  padding: 1em;
   display: inline-block;
 }
 .content {
   background-color: #FFF;
-  padding: 20px;
+  padding: 2em;
 }
 .content h2 {
   padding: 0;
   margin: 0;
 }
 .content li {
-  margin-bottom: 10px;
+  margin-bottom: 3em;
+}
+
+.tomato {
+  margin: auto;
+  height: 10em;
+  width: 10em;
+  background-image: url("/tomato.svg");
+  border-radius: 50%;
+  padding: 122;
+  align-items: center;
+}
+.tomato .menu {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.tomato .menu li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+
+.tomato .menu li a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1em;
+  display: inline-block;
+}
+
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
 }
