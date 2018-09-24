@@ -1,9 +1,9 @@
 body {
-  background-color: #DD6632;
+  background-color: white;
   padding: 2em;
   margin: 0;
 }
-h1, h2, p, ul, li {
+h1, h2, p, ul, li, a {
   font-family: sans-serif;
 }
 ul.header li {
@@ -24,7 +24,7 @@ ul.header li a {
 }
 .content {
   background-color: #FFF;
-  padding: 2em;
+  padding: 1em;
 }
 .content h2 {
   padding: 0;
@@ -51,14 +51,8 @@ ul.header li a {
   align-self: center;
 }
 
-.tomato .menu li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-}
-
-.tomato .menu li a {
-  color: black;
+.tomato .menu a {
+  color: white;
   font-weight: bold;
   text-decoration: none;
   padding: 1em;
