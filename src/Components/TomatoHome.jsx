@@ -1,19 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Button, Icon } from 'semantic-ui-react';
+
+let HomeButton = ({linkName, buttonContent, iconName}) => {
+  return (
+    <NavLink to={linkName}>
+        <Button  animated='fade' color='#FD4848' className='color1' >
+            <Button.Content visible>
+            {buttonContent}
+          </Button.Content>
+          <Button.Content hidden>
+            <Icon name={iconName} />
+          </Button.Content>
+        </Button>
+    </NavLink>
+  );
+}
 
 class TomatoHome extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <div className="tomato">
           <div className="menu">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/stuff">Stuff</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <HomeButton linkName="/" buttonContent="Home" iconName="home" /> 
+            <HomeButton linkName="/about" buttonContent="About" iconName="address card outline" /> 
+            <HomeButton linkName="/stuff" buttonContent="Stuff" iconName="file alternate outline" /> 
+            <HomeButton linkName="/contact" buttonContent="Contact" iconName="paper plane outline" /> 
           </div>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }

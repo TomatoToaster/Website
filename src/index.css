@@ -22,22 +22,11 @@ ul.header li a {
   padding: 1em;
   display: inline-block;
 }
-.content {
-  background-color: #FFF;
-  padding: 1em;
-}
-.content h2 {
-  padding: 0;
-  margin: 0;
-}
-.content li {
-  margin-bottom: 3em;
-}
 
 .tomato {
   margin: auto;
-  height: 10em;
-  width: 10em;
+  height: 40em;
+  width: 40em;
   background-image: url("/tomato.svg");
   border-radius: 50%;
   padding: 122;
@@ -49,16 +38,21 @@ ul.header li a {
   justify-content: center;
   align-items: center;
   align-self: center;
+  padding-top: 9em;
 }
 
 .tomato .menu a {
   color: white;
   font-weight: bold;
   text-decoration: none;
-  padding: 1em;
-  display: inline-block;
+  padding: 0.5em;
+  display: e-block;
 }
 
+.ui.color1.button {
+  background-color: #FD4848;
+  color: #fff;
+}
 
 footer {
   position: fixed;
