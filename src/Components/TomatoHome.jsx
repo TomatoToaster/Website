@@ -23,7 +23,6 @@ class TomatoHome extends Component {
       <Fragment>
         <div className="tomato">
           <div className="menu">
-            <HomeButton linkName="/" buttonContent="Home" iconName="home" /> 
             <HomeButton linkName="/about" buttonContent="About" iconName="address card outline" /> 
             <HomeButton linkName="/stuff" buttonContent="Stuff" iconName="file alternate outline" /> 
             <HomeButton linkName="/contact" buttonContent="Contact" iconName="paper plane outline" /> 

@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import {
   Route,
   BrowserRouter,
-  Switch
 } from 'react-router-dom';
 import Stuff from './Stuff.jsx';
 import Contact from './Contact.jsx';
