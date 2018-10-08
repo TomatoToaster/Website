@@ -37,7 +37,7 @@ const config = {
     new HtmlWebPackPlugin({
       hash: true,
       title: 'Amal Nazeem\'s Website',
-      favicon: `${SRC_DIR}/TomatoToaster.ico`,
+      favicon: `${PUB_DIR}/TomatoToaster.ico`,
       template: `${SRC_DIR}/index.html`,
       filename: `${APP_DIR}/index.html`,
     }),
