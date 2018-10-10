@@ -3,8 +3,7 @@ import {
   Route,
   BrowserRouter,
 } from 'react-router-dom';
-import Stuff from './Stuff.jsx';
-import Contact from './Contact.jsx';
+import Interests from './Interests.jsx';
 import Tomato from './TomatoHome.jsx';
 import About from './About.jsx';
 import Navbar from './Navbar.jsx';
@@ -22,11 +21,12 @@ class App extends Component {
         <Fragment>
           <Route exact path="/" component={Tomato} />
 
-          <Route path="/:page" component={Navbar} />
           <Container>
-            <Route path="/about" component={About} />
-            <Route path="/stuff" component={Stuff} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/:page" component={Navbar} />
+            <Container className='page-text'>
+              <Route path="/about" component={About} />
+              <Route path="/interests" component={Interests} />
+            </Container>
           </Container>
         </Fragment>
       </BrowserRouter>

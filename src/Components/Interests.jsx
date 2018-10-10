@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react';
 
-class Stuff extends Component {
+class Interests extends Component {
   render() {
     return (
       <Fragment>
-        <h2>This is Stuff!</h2>
-        <p>Yay!</p>
+        <h2>Coming Soon!</h2>
+        <p>Hold on tight!</p>
       </Fragment>
     );
   }
 }
 
-export default Stuff;
+export default Interests;
