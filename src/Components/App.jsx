@@ -3,10 +3,10 @@ import {
   Route,
   BrowserRouter,
 } from 'react-router-dom';
-import Interests from './Interests.jsx';
-import Tomato from './TomatoHome.jsx';
-import About from './About.jsx';
-import Navbar from './Navbar.jsx';
+import Interests from './Interests';
+import Tomato from './TomatoHome';
+import About from './About';
+import Navbar from './Navbar';
 import { Container } from 'semantic-ui-react';
 
 
