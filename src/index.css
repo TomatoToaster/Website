@@ -24,11 +24,11 @@ ul.header li a {
 }
 .tomato {
   margin: auto;
-  height: 40em;
   width: 40em;
+  height: auto;
   background-image: url("/tomato.svg");
-  border-radius: 50%;
-  padding: 122;
+  background-repeat: no-repeat;
+  padding: 9em;
   align-items: center;
 }
 .tomato .menu {
