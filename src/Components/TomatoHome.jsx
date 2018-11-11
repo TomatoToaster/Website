@@ -44,7 +44,7 @@ class TomatoHome extends Component {
             <NavButton navName="/interests" buttonContent="Interests" iconName="heart outline" /> 
             <OpenLinkButton link='mailto:amalnazeem@gmail.com' buttonContent='Contact' iconName='paper plane outline' />
             <OpenLinkButton link='https://github.com/TomatoToaster' buttonContent='GitHub' iconName='github alternate' />
-            <OpenLinkButton link='/Resume.pdf' buttonContent='Resume' iconName='file alternate outline' />
+            <OpenLinkButton link='/AmalNazeem_Resume.pdf' buttonContent='Resume' iconName='file alternate outline' />
           </div>
         </div>
       </Fragment>
