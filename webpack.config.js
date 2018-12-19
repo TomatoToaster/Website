@@ -7,7 +7,7 @@ const SRC_DIR = path.resolve(__dirname, 'src');
 const PUB_DIR = path.resolve(__dirname, 'public');
 
 const config = {
-  entry: [`${SRC_DIR}/index.js`],
+  entry: `${SRC_DIR}/index.js`,
   output: {
     path: APP_DIR,
     filename: 'bundle.js',
