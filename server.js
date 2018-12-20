@@ -2,14 +2,24 @@ var express = require('express')
 var path = require("path")
 var app = express()
 
-app.set('port', (process.env.PORT || 8080))
 app.use(express.static(__dirname + '/dist'))
 app.use(express.static(__dirname + '/public'))
 
-app.get('/', function(request, response) {
-  response.sendFile(path.join(__dirname + '/dist/index.html'));
-})
+// Set up Front End
+// =============================================================================
+const port = process.env.PORT || 8080;
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
+// This sends out the front end (index.html)
+const front_end_handler = function(request, response) {
+  response.sendFile(path.join(__dirname + '/dist/index.html'));
+}
+
+// These are the routes that should point to the front end
+const front_end_routes = ['/', '/about'];
+
+// Now we are sending the index.html to each of the front end routes
+front_end_routes.forEach(route => app.get(route, front_end_handler));
+
+app.listen(port, function() {
+  console.log("Node app is running at localhost:" + port)
 })
