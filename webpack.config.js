@@ -10,6 +10,7 @@ const config = {
   entry: `${SRC_DIR}/index.js`,
   output: {
     path: APP_DIR,
+    publicPath: '/',
     filename: 'bundle.js',
   },
   mode: 'production',
@@ -56,6 +57,7 @@ const config = {
 
   devServer: {
     contentBase: PUB_DIR,
+    historyApiFallback: true
   },
 };
 

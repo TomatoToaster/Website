@@ -3,7 +3,7 @@ import {
   Route,
   BrowserRouter,
 } from 'react-router-dom';
-import Interests from './Interests';
+import Interests from './Interests/Interests';
 import Tomato from './TomatoHome';
 import About from './About';
 import Navbar from './Navbar';
@@ -25,7 +25,7 @@ class App extends Component {
             <Route path="/:page" component={Navbar} />
             <Container className='page-text'>
               <Route path="/about" component={About} />
-              <Route path="/interests" component={Interests} />
+              <Route path="/interests/:interest?" component={Interests} />
             </Container>
           </Container>
         </Fragment>
