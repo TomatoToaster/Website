@@ -4,24 +4,8 @@ import { Button, Icon } from 'semantic-ui-react';
 
 const ICON_SIZE = 'large';
 
-const NavButton = ({navName, buttonContent, iconName}) => {
-  return (
-    <NavLink to={navName}>
-        <Button  animated='fade' className='color1' >
-            <Button.Content visible>
-            {buttonContent}
-          </Button.Content>
-          <Button.Content hidden>
-            <Icon name={iconName} size={ICON_SIZE} />
-          </Button.Content>
-        </Button>
-    </NavLink>
-  );
-}
-
-const OpenLinkButton = ({link, buttonContent, iconName}) => {
-  return (
-    <a href={link} target='_blank'>
+const NavButton = ({navName, buttonContent, iconName}) => (
+  <NavLink to={navName}>
       <Button  animated='fade' className='color1' >
           <Button.Content visible>
           {buttonContent}
@@ -30,9 +14,21 @@ const OpenLinkButton = ({link, buttonContent, iconName}) => {
           <Icon name={iconName} size={ICON_SIZE} />
         </Button.Content>
       </Button>
-    </a>
-  );
-}
+  </NavLink>
+);
+
+const OpenLinkButton = ({link, buttonContent, iconName}) => (
+  <a href={link} target='_blank'>
+    <Button  animated='fade' className='color1' >
+        <Button.Content visible>
+        {buttonContent}
+      </Button.Content>
+      <Button.Content hidden>
+        <Icon name={iconName} size={ICON_SIZE} />
+      </Button.Content>
+    </Button>
+  </a>
+);
 
 class TomatoHome extends Component {
   render() {
