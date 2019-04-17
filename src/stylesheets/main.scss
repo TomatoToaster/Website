@@ -1,6 +1,13 @@
 /* Imports */
 @import 'fonts/fonts';
 
+/* Secret Color Assigning */
+$color0: #e43b44;
+$color1: #4285f4;
+$color2: #34A853;
+$color3: #FBBC05;
+$color4: #EA4335;
+
 body {
   background-color: white;
   padding: 2em;
@@ -81,8 +88,9 @@ h1, h2, h3, h4, p, ul, li, a, button {
   }
 }
 
-.color1 {
-  background-color: #e43b44;
+/* Secret Color Preperation */
+.color0, .color1, .color2, .color3, .color4 {
+  background-color: $color0;
 }
 
 .page-container {
@@ -133,7 +141,6 @@ h1, h2, h3, h4, p, ul, li, a, button {
     width: 320px;
     height: 320px;
     .menu {
-      margin: auto;
       padding-top: 150px;
       flex-direction: row;
       
@@ -153,5 +160,28 @@ h1, h2, h3, h4, p, ul, li, a, button {
         }
       }
     }
+  }
+}
+
+/* An experience for truly tiny phone screens */
+@media only screen and (max-width: 320px) {
+  .tomato {
+    background-image: none;
+    .menu {
+      flex-direction: column;
+    }
+  }
+  /* Secret Colors Implementation */
+  .color1 {
+    background-color: $color1;
+  }
+  .color2 {
+    background-color: $color2;
+  }
+  .color3 {
+    background-color: $color3;
+  }
+  .color4 {
+    background-color: $color4;
   }
 }

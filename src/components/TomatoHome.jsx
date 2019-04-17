@@ -1,11 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const ICON_SIZE = 'large';
-
-const NavButton = ({navName, buttonContent, imgName}) => (
+const NavButton = ({navName, buttonContent, imgName, colorClassName='color0'}) => (
   <NavLink to={navName}>
-      <div className='fade-button color1' >
+      <div className={'fade-button ' + colorClassName} >
         <div className='text-content'>
           {buttonContent}
         </div>
@@ -16,9 +14,9 @@ const NavButton = ({navName, buttonContent, imgName}) => (
   </NavLink>
 );
 
-const OpenLinkButton = ({link, buttonContent, imgName}) => (
+const OpenLinkButton = ({link, buttonContent, imgName, colorClassName='color0'}) => (
   <a href={link} target='_blank'>
-    <div className='fade-button color1'>
+    <div className={'fade-button ' + colorClassName} >
       <div className='text-content'>
         {buttonContent}
       </div>
@@ -35,10 +33,10 @@ class TomatoHome extends Component {
       <Fragment>
         <div className="tomato">
           <div className="menu">
-            <NavButton navName="/about" buttonContent="About Me" imgName="profile-card.png" /> 
-            <NavButton navName="/interests" buttonContent="Interests" imgName="heart.png" /> 
-            <OpenLinkButton link='https://github.com/TomatoToaster' buttonContent='GitHub' imgName='github-octocat.png' />
-            <OpenLinkButton link='/AmalNazeem_Resume.pdf' buttonContent='Resume' imgName='file.png' />
+            <NavButton navName="/about" buttonContent="About Me" imgName="profile-card.png" colorClassName='color1' /> 
+            <NavButton navName="/interests" buttonContent="Interests" imgName="heart.png" colorClassName='color2' /> 
+            <OpenLinkButton link='https://github.com/TomatoToaster' buttonContent='GitHub' imgName='github-octocat.png' colorClassName='color3' />
+            <OpenLinkButton link='/AmalNazeem_Resume.pdf' buttonContent='Resume' imgName='file.png' colorClassName='color4' />
           </div>
         </div>
       </Fragment>
