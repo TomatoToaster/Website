@@ -1,32 +1,31 @@
 import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Button, Icon } from 'semantic-ui-react';
 
 const ICON_SIZE = 'large';
 
-const NavButton = ({navName, buttonContent, iconName}) => (
+const NavButton = ({navName, buttonContent, imgName}) => (
   <NavLink to={navName}>
-      <Button  animated='fade' className='color1' >
-          <Button.Content visible>
+      <div className='fade-button color1' >
+        <div className='visibleContent'>
           {buttonContent}
-        </Button.Content>
-        <Button.Content hidden>
-          <Icon name={iconName} size={ICON_SIZE} />
-        </Button.Content>
-      </Button>
+        </div>
+        <div className='hiddenContent'>
+          <img src={'/' + imgName} />
+        </div>
+      </div>
   </NavLink>
 );
 
-const OpenLinkButton = ({link, buttonContent, iconName}) => (
+const OpenLinkButton = ({link, buttonContent, imgName}) => (
   <a href={link} target='_blank'>
-    <Button  animated='fade' className='color1' >
-        <Button.Content visible>
+    <div className='fade-button color1'>
+      <div className='visibleContent'>
         {buttonContent}
-      </Button.Content>
-      <Button.Content hidden>
-        <Icon name={iconName} size={ICON_SIZE} />
-      </Button.Content>
-    </Button>
+      </div>
+      <div className='hiddenContent'>
+        <img src={'/' + imgName} />
+      </div>
+    </div>
   </a>
 );
 
@@ -36,10 +35,10 @@ class TomatoHome extends Component {
       <Fragment>
         <div className="tomato">
           <div className="menu">
-            <NavButton navName="/about" buttonContent="About Me" iconName="address card outline" /> 
-            <NavButton navName="/interests" buttonContent="Interests" iconName="heart outline" /> 
-            <OpenLinkButton link='https://github.com/TomatoToaster' buttonContent='GitHub' iconName='github alternate' />
-            <OpenLinkButton link='/AmalNazeem_Resume.pdf' buttonContent='Resume' iconName='file alternate outline' />
+            <NavButton navName="/about" buttonContent="About Me" imgName="profile-card.png" /> 
+            <NavButton navName="/interests" buttonContent="Interests" imgName="heart.png" /> 
+            <OpenLinkButton link='https://github.com/TomatoToaster' buttonContent='GitHub' imgName='github.png' />
+            <OpenLinkButton link='/AmalNazeem_Resume.pdf' buttonContent='Resume' imgName='file.png' />
           </div>
         </div>
       </Fragment>
