@@ -5,8 +5,9 @@ import { Menu } from 'semantic-ui-react';
 import Film from './Film';
 import Literature from './Literature';
 import Games from './Games';
+import Art from './Art';
 
-const INTERESTS = ['film', 'literature', 'games'];
+const INTERESTS = ['art', 'games', 'film', 'literature'];
 
 const MenuInterest = (name, currentInterest) => (
   <NavLink to={'/interests/' + name}>
@@ -23,12 +24,13 @@ class Interests extends Component {
         </Menu>
 
         {!this.props.match.params.interest && (
-          <h4>Still under construction, but please feel free to click one of the above!</h4>
+          <p>Still under construction, but please feel free to click one of the above!</p>
         )}
 
+        <Route path='/interests/art' component={Art} />
+        <Route path='/interests/games' component={Games} />
         <Route path='/interests/film' component={Film} />
         <Route path='/interests/literature' component={Literature} />
-        <Route path='/interests/games' component={Games} />
       </Fragment>
     );
   }

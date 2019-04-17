@@ -6,6 +6,7 @@ class Film extends Component {
     return (
       <Segment>
         <h2>Film</h2>
+        <p>Nothing quite yet!</p>
       </Segment>
     );
   }

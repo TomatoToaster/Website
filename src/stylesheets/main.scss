@@ -5,34 +5,17 @@ body {
   background-color: white;
   padding: 2em;
   margin: 0;
-  margin-top: 4em;
   font-family: $press-start-2p;
 }
-h1, h2, h4, p, ul, li, a, button {
+h1, h2, h3, h4, p, ul, li, a, button {
   font-family: $press-start-2p;
-}
-
-ul.header {
-  background-color: #111;
-  padding: 0;
-  li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-    a {
-      color: #FFF;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 20px;
-      display: inline-block;
-    }
-  }
 }
 
 .tomato {
   margin: auto;
   width: 640px;
   height: 640px;
+  margin-top: 8em;
   background-image: url("/TomatoLarge.png");
   background-repeat: no-repeat;
   align-items: center;
@@ -52,17 +35,17 @@ ul.header {
       .fade-button {
         text-align: center;
         position: relative;
-        padding: 0.5em;
+        padding: 8px;
         color: white;
         border: none;
 
-        .visibleContent {
+        .text-content {
           position: relative;
           opacity: 1;
           -webkit-transform: scale(1);
           transform: scale(1);
         }
-        .hiddenContent {
+        .icon-content {
           position: absolute;
           box-sizing: inherit;
           left: 0;
@@ -70,10 +53,10 @@ ul.header {
           opacity: 0;
           -webkit-transform: scale(1.8);
           transform: scale(1.8);
-          margin-top: -0.5em;
+          margin-top: -16px;
           top: 50%;
         }
-        .visibleContent, .hiddenContent {
+        .text-content, .icon-content {
           width: 100%;
           pointer-events: none;
           -webkit-transition: opacity .3s ease,-webkit-transform .3s ease;
@@ -81,10 +64,10 @@ ul.header {
         }
 
         &:hover {
-          .visibleContent {
+          .text-content {
             opacity: 0;
           }
-          .hiddenContent {
+          .icon-content {
             opacity: 1;
             -webkit-transform: scale(1);
             transform: scale(1);
@@ -99,7 +82,73 @@ ul.header {
   background-color: #e43b44;
 }
 
-.page-text {
-  padding-left: 2em;
-  padding-right: 2em;
+.page-container {
+  ul.header {
+    background-color: #111;
+    padding: 0;
+    li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+      a {
+        color: #FFF;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 20px;
+        display: inline-block;
+      }
+    }
+  }
+  .page-text-container {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+  .page-container {
+    .page-text-container {
+      .ui.secondary.menu {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .tomato {
+    background-image: url("/TomatoSmall.png");
+    width: 320px;
+    height: 320px;
+    .menu {
+      margin: auto;
+      padding-top: 150px;
+      flex-direction: row;
+      
+      a {
+        margin: 8px;
+        .fade-button {
+          width: 40px;
+          height: 40px;
+          .text-content {
+            opacity: 0;
+          }
+          .icon-content {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
 }

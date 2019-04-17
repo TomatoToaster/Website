@@ -6,6 +6,7 @@ class Literature extends Component {
     return (
       <Segment>
         <h2>Books and Such</h2>
+        <p>Nothing quite yet!</p>
       </Segment>
     );
   }

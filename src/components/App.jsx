@@ -7,7 +7,6 @@ import Interests from './Interests/Interests';
 import Tomato from './TomatoHome';
 import About from './About';
 import Navbar from './Navbar';
-import { Container } from 'semantic-ui-react';
 
 
 /**
@@ -20,14 +19,13 @@ class App extends Component {
       <BrowserRouter location="history">
         <Fragment>
           <Route exact path="/" component={Tomato} />
-
-          <Container>
+          <div className='page-container'>
             <Route path="/:page" component={Navbar} />
-            <Container className='page-text'>
+            <div className='page-text-container'>
               <Route path="/about" component={About} />
               <Route path="/interests/:interest?" component={Interests} />
-            </Container>
-          </Container>
+            </div>
+          </div>
         </Fragment>
       </BrowserRouter>
     );

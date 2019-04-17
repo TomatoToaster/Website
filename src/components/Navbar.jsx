@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Icon } from 'semantic-ui-react';
 
 class Navbar extends Component {
   render() {
     return (
         <ul className="header">
-          <li><NavLink to="/"><Icon name='reply' size='large' /></NavLink></li>
+          <li><NavLink to="/"><img src='/back.png' /></NavLink></li>
         </ul>
     );
   }
