@@ -1,0 +1,105 @@
+/* Imports */
+@import 'fonts/fonts';
+
+body {
+  background-color: white;
+  padding: 2em;
+  margin: 0;
+  margin-top: 4em;
+  font-family: $press-start-2p;
+}
+h1, h2, h4, p, ul, li, a, button {
+  font-family: $press-start-2p;
+}
+
+ul.header {
+  background-color: #111;
+  padding: 0;
+  li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+    a {
+      color: #FFF;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 20px;
+      display: inline-block;
+    }
+  }
+}
+
+.tomato {
+  margin: auto;
+  width: 640px;
+  height: 640px;
+  background-image: url("/TomatoLarge.png");
+  background-repeat: no-repeat;
+  align-items: center;
+  font-size: 16px;
+  .menu {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-top: 250px;
+
+    a {
+      text-decoration: none;
+      margin: 20px;
+
+      .fade-button {
+        text-align: center;
+        position: relative;
+        padding: 0.5em;
+        color: white;
+        border: none;
+
+        .visibleContent {
+          position: relative;
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        .hiddenContent {
+          position: absolute;
+          box-sizing: inherit;
+          left: 0;
+          right: auto;
+          opacity: 0;
+          -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+          margin-top: -0.5em;
+          top: 50%;
+        }
+        .visibleContent, .hiddenContent {
+          width: 100%;
+          pointer-events: none;
+          -webkit-transition: opacity .3s ease,-webkit-transform .3s ease;
+          transition: opacity .3s ease,transform .3s ease,-webkit-transform .3s ease;
+        }
+
+        &:hover {
+          .visibleContent {
+            opacity: 0;
+          }
+          .hiddenContent {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.color1 {
+  background-color: #e43b44;
+}
+
+.page-text {
+  padding-left: 2em;
+  padding-right: 2em;
+}

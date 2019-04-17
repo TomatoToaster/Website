@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/dist'))
 app.use(express.static(__dirname + '/public'))
 
 // sending up static files for OneTwo (duplicate index.html won't be a problem)
-app.use(express.static(path.resolve(__dirname, '..', 'OneTwo', 'dist')))
+app.use(express.static(path.resolve(__dirname, 'OneTwo', 'dist')))
 
 // Set up Front End
 // =============================================================================
@@ -26,7 +26,7 @@ front_end_routes.forEach(route => app.get(route, front_end_handler));
 
 // Special route that will point to the game OneTwo
 app.get('/OneTwo', function(request, response) {
-  response.sendFile(path.resolve(__dirname, '..', 'OneTwo', 'dist', 'index.html'))
+  response.sendFile(path.resolve(__dirname, 'OneTwo', 'dist', 'index.html'))
 })
 
 app.listen(port, function() {
