@@ -8,6 +8,7 @@
     "start": "node server.js",
     "start:dev": "webpack-dev-server",
     "all": "npm run build && npm start",
+    "cleanBuildOneTwo": "cd OneTwo && git pull && npm ci && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
