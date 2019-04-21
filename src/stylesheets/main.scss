@@ -90,6 +90,16 @@ h1, h2, h3, h4, p, ul, li, a, button {
   }
 }
 
+.pixel-backgrounds, .pixel-sprites {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  .big-digital-art-piece, .digital-art-piece {
+    margin: 10px;
+    overflow: hidden;
+  }
+}
+
 /* Secret Color Preperation */
 .color0, .color1, .color2, .color3, .color4 {
   background-color: $color0;
@@ -162,6 +172,11 @@ h1, h2, h3, h4, p, ul, li, a, button {
         }
       }
     }
+  }
+
+  /* Art that is too big for mobile screens just won't be displayed */
+  .big-digital-art-piece {
+    display: none;
   }
 }
 
