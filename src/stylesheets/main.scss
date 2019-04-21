@@ -2,7 +2,9 @@
 @import 'fonts/fonts';
 
 /* Secret Color Assigning */
-$color0: #e43b44;
+$color-buton-text: white;
+$color-tomato: #e43b44;
+$color0: transparent;
 $color1: #4285f4;
 $color2: #34A853;
 $color3: #FBBC05;
@@ -46,7 +48,7 @@ h1, h2, h3, h4, p, ul, li, a, button {
         text-align: center;
         position: relative;
         padding: 8px;
-        color: white;
+        color: $color-buton-text;
         border: none;
 
         .text-content {
