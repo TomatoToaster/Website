@@ -8,7 +8,7 @@ const NavButton = ({navName, buttonContent, imgName, colorClassName='color0'}) =
           {buttonContent}
         </div>
         <div className='icon-content'>
-          <img src={'/' + imgName} />
+          <img src={'/' + imgName} alt={buttonContent} />
         </div>
       </div>
   </NavLink>
@@ -21,7 +21,7 @@ const OpenLinkButton = ({link, buttonContent, imgName, colorClassName='color0'})
         {buttonContent}
       </div>
       <div className='icon-content'>
-        <img src={'/' + imgName} />
+        <img src={'/' + imgName} alt={buttonContent} />
       </div>
     </div>
   </a>
