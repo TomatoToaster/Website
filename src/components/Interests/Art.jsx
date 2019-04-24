@@ -3,18 +3,25 @@ import { Segment } from 'semantic-ui-react';
 
 const BACKGROUND_URLS = [
   { 
-    url: 'https://raw.githubusercontent.com/TomatoToaster/Backgrounds/master/SunsetTomato/OceanSunsetTomato.gif',
+    urlSmall: 'https://raw.githubusercontent.com/TomatoToaster/Backgrounds/master/SunsetTomato/OceanSunsetTomatoRaw.gif',
+    urlBig: 'https://raw.githubusercontent.com/TomatoToaster/Backgrounds/master/SunsetTomato/OceanSunsetTomato.gif',
     altText: 'Ocean Sunset with a Tomato as the Sun',
-    isBig: true
- }
+  },
 ];
 const SPRITE_URLS = [
   { url: 'https://raw.githubusercontent.com/TomatoToaster/Sprites/master/Cat/CurlyTailCat.gif', altText: 'Curly Tail Cat' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/Sprites/master/Cat/HappyPenCat.gif', altText: 'Happy Pen Cat' },
 ] 
-const DigitalArtPiece = ({url, altText, isBig = false}) => ( 
-  <img src={url} alt={altText} className={ isBig ? "big-digital-art-piece" : "digital-art-piece" } />
+const DigitalArtPiece = ({url, altText}) => ( 
+  <img src={url} alt={altText} className="digital-art-piece" />
 ); 
+
+const ResizableDigitalArtPiece = ({urlSmall, urlBig, altText}) => (
+  <div className="resizable-digital-art-piece">
+    <img src={urlSmall} alt={altText} className="small-digital-art-piece" />
+    <img src={urlBig} alt={altText} className="big-digital-art-piece" />
+  </div>
+);
 
 class Art extends Component { 
   render() {
@@ -36,7 +43,7 @@ class Art extends Component {
           <p> Or some of the backgrounds: </p>
         </a>
         <div className='pixel-backgrounds'>
-          {BACKGROUND_URLS.map(DigitalArtPiece)}
+          {BACKGROUND_URLS.map(ResizableDigitalArtPiece)}
         </div>
       </Segment>
     );

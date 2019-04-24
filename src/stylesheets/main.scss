@@ -90,14 +90,22 @@ h1, h2, h3, h4, p, ul, li, a, button {
   }
 }
 
+
+/* rules for digital artwork pieces */
 .pixel-backgrounds, .pixel-sprites {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-  .big-digital-art-piece, .digital-art-piece {
-    margin: 10px;
-    overflow: hidden;
-  }
+  justify-content: center;
+}
+
+.resizable-digital-art-piece, .digital-art-piece {
+  margin: 10px;
+  overflow: auto;
+}
+
+.small-digital-art-piece {
+  display: none;
 }
 
 /* Secret Color Preperation */
@@ -174,9 +182,12 @@ h1, h2, h3, h4, p, ul, li, a, button {
     }
   }
 
-  /* Art that is too big for mobile screens just won't be displayed */
+  /* rules for digital artwork pieces */
   .big-digital-art-piece {
     display: none;
+  }
+  .small-digital-art-piece {
+    display: inline;
   }
 }
 
