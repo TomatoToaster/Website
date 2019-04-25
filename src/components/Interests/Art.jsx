@@ -10,6 +10,7 @@ const BACKGROUND_URLS = [
 ];
 const SPRITE_URLS = [
   { url: 'https://raw.githubusercontent.com/TomatoToaster/Sprites/master/Cat/CurlyTailCat.gif', altText: 'Curly Tail Cat' },
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/Sprites/master/Flower/DancingFlower.gif', altText: 'Dancing Flower' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/Sprites/master/Cat/HappyPenCat.gif', altText: 'Happy Pen Cat' },
 ] 
 const DigitalArtPiece = ({url, altText}) => ( 
