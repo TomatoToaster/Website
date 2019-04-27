@@ -3,15 +3,15 @@ import { Segment } from 'semantic-ui-react';
 
 const BACKGROUND_URLS = [
   { 
-    urlSmall: 'https://raw.githubusercontent.com/TomatoToaster/Backgrounds/master/SunsetTomato/OceanSunsetTomatoRaw.gif',
-    urlBig: 'https://raw.githubusercontent.com/TomatoToaster/Backgrounds/master/SunsetTomato/OceanSunsetTomato.gif',
+    urlSmall: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/master/Backgrounds/SunsetTomato/OceanSunsetTomatoRaw.gif',
+    urlBig: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/master/Backgrounds/SunsetTomato/OceanSunsetTomato.gif',
     altText: 'Ocean Sunset with a Tomato as the Sun',
   },
 ];
 const SPRITE_URLS = [
-  { url: 'https://raw.githubusercontent.com/TomatoToaster/Sprites/master/Cat/CurlyTailCat.gif', altText: 'Curly Tail Cat' },
-  { url: 'https://raw.githubusercontent.com/TomatoToaster/Sprites/master/Flower/DancingFlower.gif', altText: 'Dancing Flower' },
-  { url: 'https://raw.githubusercontent.com/TomatoToaster/Sprites/master/Cat/HappyPenCat.gif', altText: 'Happy Pen Cat' },
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/master/Sprites/Cat/CurlyTailCat.gif', altText: 'Curly Tail Cat' },
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/master/Sprites/Flower/DancingFlower.gif', altText: 'Dancing Flower' },
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/master/Sprites/Cat/HappyPenCat.gif', altText: 'Happy Pen Cat' },
 ] 
 const DigitalArtPiece = ({url, altText}) => ( 
   <img src={url} alt={altText} className="digital-art-piece" />
