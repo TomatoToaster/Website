@@ -7,6 +7,11 @@ const BACKGROUND_URLS = [
     urlBig: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/master/Backgrounds/SunsetTomato/OceanSunsetTomato.gif',
     altText: 'Ocean Sunset with a Tomato as the Sun',
   },
+  { 
+    urlSmall: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/master/Backgrounds/Rain/Cat_In_Rain_Raw.gif',
+    urlBig: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/master/Backgrounds/Rain/Cat_In_Rain.gif',
+    altText: 'Cat sitting outside in the rain',
+  },
 ];
 const SPRITE_URLS = [
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/master/Sprites/Cat/CurlyTailCat.gif', altText: 'Curly Tail Cat' },
