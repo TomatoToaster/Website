@@ -36,7 +36,7 @@ class Art extends Component {
         <h2>Pixel Art</h2>
         <p>Full disclaimer, I've only recently started learning how to make this, so I'm still very much an amateur!</p>
 
-        <a href={'https://github.com/TomatoToaster/Sprites.git'} target='_blank'>
+        <a href={'https://github.com/TomatoToaster/PixelArt/tree/master/Sprites'} target='_blank'>
           <p> Check out some of the sprites I've been working on: </p>
         </a>
         <div className='pixel-sprites'>
@@ -45,7 +45,7 @@ class Art extends Component {
 
         <br/>
 
-        <a href={'https://github.com/TomatoToaster/Backgrounds.git'} target='_blank'>
+        <a href={'https://github.com/TomatoToaster/PixelArt/tree/master/Backgrounds'} target='_blank'>
           <p> Or some of the backgrounds: </p>
         </a>
         <div className='pixel-backgrounds'>
