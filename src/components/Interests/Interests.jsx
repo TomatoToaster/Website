@@ -24,7 +24,7 @@ class Interests extends Component {
         </Menu>
 
         {!this.props.match.params.interest && (
-          <p>Still under construction, but please feel free to click one of the above!</p>
+          <p>Please click on one of the above to learn more about my interests and see some of my work!</p>
         )}
 
         <Route path='/interests/art' component={Art} />
