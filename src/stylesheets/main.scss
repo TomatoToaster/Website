@@ -2,7 +2,6 @@
 @import 'fonts/fonts';
 
 /* Secret Color Assigning */
-$color-button-text: white;
 $color-tomato: #e43b44;
 $color0: transparent;
 $color1: #4285f4;
@@ -10,14 +9,59 @@ $color2: #34A853;
 $color3: #FBBC05;
 $color4: #EA4335;
 
+$PaletteBlack: #302c2e;
+$PaletteWhite: #dff6f5;
+$PaletteGray: #5a5353;
+$PaletteBlueText: #3978a8;
+$color-button-text: $PaletteWhite;
+
 body {
-  background-color: white;
+  background-color: $PaletteBlack;
   padding: 2em;
   margin: 0;
   font-family: $press-start-2p;
+  line-height: 1.4285em;
+
+  // ScrollBar nonsense (similar to semantic-ui css)
+  & ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+  }
+  & ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(0,0,0,.25);
+    -webkit-transition: color .2s ease;
+    transition: color .2s ease;
+    &:hover {
+      background: rgba(200,200,200, .25)
+    }
+  }
+  & ::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.1);
+    border-radius: 0;
+  }
 }
-h1, h2, h3, h4, p, ul, li, a, button {
+h1, h2, h3, h4, p, ul, li, button {
   font-family: $press-start-2p;
+  color: $PaletteWhite;
+}
+a {
+  font-family: $press-start-2p;
+  color: $PaletteBlueText;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  padding: 0;
+  line-height: 1.25em;
+}
+
+p {
+  margin: 0 0 1em;
+  line-height: 1.45em;
 }
 
 
@@ -115,18 +159,33 @@ h1, h2, h3, h4, p, ul, li, a, button {
 
 .page-container {
   ul.header {
-    background-color: #111;
+    display: flex;
+    align-items: center;
+    background-color: $PaletteGray;
     padding: 0;
+    overflow-x: auto;
+    margin: 0;
     li {
     display: inline;
     list-style-type: none;
-    margin: 0;
+    text-transform: capitalize;
+    &.active-nav-subcategory {
+      border-bottom-width: 2;
+      border-bottom-style: solid;
+      border-bottom-color: $PaletteWhite;
+    }
       a {
-        color: #FFF;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 20px;
-        display: inline-block;
+        img{
+          padding: 20
+        }
+        .navbar-text-button {
+          padding-top: 20;
+          padding-bottom: 5;
+          padding-left: 20;
+          padding-right: 20;
+          color: $PaletteWhite;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -165,7 +224,7 @@ h1, h2, h3, h4, p, ul, li, a, button {
       flex-direction: row;
       
       a {
-        margin: 8px;
+        margin: 0;
         .fade-button {
           width: 40px;
           height: 40px;

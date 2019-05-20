@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import { Segment } from 'semantic-ui-react';
+import React, { Component, Fragment } from 'react';
 
 class Games extends Component {
   render() {
     return (
-      <Segment>
+      <Fragment>
         <h2>Video Games</h2>
-        <a href={'/OneTwo'} target='_blank'>
-          Try out a simple game I made by clicking here.
-        </a>
-        <span>(Click/tap the screen to alternate between moving and shooting.)</span>
-      </Segment>
+        <p>
+          <a href={'/OneTwo'} target='_blank'> Try out a simple game I made by clicking here. </a>
+          (Click/tap the screen to alternate between moving and shooting.)
+        </p>
+      </Fragment>
     );
   }
 }

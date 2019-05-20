@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import { Segment } from 'semantic-ui-react';
+import React, { Component, Fragment } from 'react';
 
 class Literature extends Component {
   render() {
     return (
-      <Segment>
+      <Fragment>
         <h2>Books and Such</h2>
         <p>Nothing quite yet!</p>
-      </Segment>
+      </Fragment>
     );
   }
 }
