@@ -20,7 +20,7 @@ class App extends Component {
         <Fragment>
           <Route exact path="/" component={Tomato} />
           <div className='page-container'>
-            <Route path="/:page" component={Navbar} />
+            <Route path="/:page/:subcategory?" component={Navbar} />
             <div className='page-text-container'>
               <Route path="/about" component={About} />
               <Route path="/interests/:interest?" component={Interests} />

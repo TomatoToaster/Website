@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Segment } from 'semantic-ui-react';
+import React, { Component, Fragment } from 'react';
 
 const BACKGROUND_URLS = [
   { 
@@ -32,12 +31,12 @@ const ResizableDigitalArtPiece = ({urlSmall, urlBig, altText}) => (
 class Art extends Component { 
   render() {
     return (
-      <Segment>
+      <Fragment>
         <h2>Pixel Art</h2>
         <p>Full disclaimer, I've only recently started learning how to make this, so I'm still very much an amateur!</p>
 
         <a href={'https://github.com/TomatoToaster/PixelArt/tree/master/Sprites'} target='_blank'>
-          <p> Check out some of the sprites I've been working on: </p>
+          Check out some of the sprites I've been working on:
         </a>
         <div className='pixel-sprites'>
           {SPRITE_URLS.map(DigitalArtPiece)}
@@ -46,12 +45,12 @@ class Art extends Component {
         <br/>
 
         <a href={'https://github.com/TomatoToaster/PixelArt/tree/master/Backgrounds'} target='_blank'>
-          <p> Or some of the backgrounds: </p>
+          Or some of the backgrounds:
         </a>
         <div className='pixel-backgrounds'>
           {BACKGROUND_URLS.map(ResizableDigitalArtPiece)}
         </div>
-      </Segment>
+      </Fragment>
     );
   }
 }
