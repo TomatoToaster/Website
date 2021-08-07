@@ -8,7 +8,7 @@ const NavButton = ({navName, buttonContent, imgName, colorClassName='color0'}) =
           {buttonContent}
         </div>
         <div className='icon-content'>
-          <img src={'/' + imgName} alt={buttonContent} />
+          <img src={'/public/' + imgName} alt={buttonContent} />
         </div>
       </div>
   </NavLink>
@@ -21,7 +21,7 @@ const OpenLinkButton = ({link, buttonContent, imgName, colorClassName='color0'})
         {buttonContent}
       </div>
       <div className='icon-content'>
-        <img src={'/' + imgName} alt={buttonContent} />
+        <img src={'/public/' + imgName} alt={buttonContent} />
       </div>
     </div>
   </a>
@@ -33,10 +33,10 @@ class TomatoHome extends Component {
       <Fragment>
         <div className="tomato">
           <div className="menu">
-            <NavButton navName="/about" buttonContent="About Me" imgName="profile-card.png" colorClassName='color1' /> 
-            <NavButton navName="/interests" buttonContent="Interests" imgName="heart.png" colorClassName='color2' /> 
+            <NavButton navName="/about" buttonContent="About Me" imgName="profile-card.png" colorClassName='color1' />
+            <NavButton navName="/interests" buttonContent="Interests" imgName="heart.png" colorClassName='color2' />
             <OpenLinkButton link='https://github.com/TomatoToaster' buttonContent='GitHub' imgName='github-octocat.png' colorClassName='color3' />
-            <OpenLinkButton link='/AmalNazeem_Resume.pdf' buttonContent='Resume' imgName='file.png' colorClassName='color4' />
+            <OpenLinkButton link='/public/AmalNazeem_Resume.pdf' buttonContent='Resume' imgName='file.png' colorClassName='color4' />
           </div>
         </div>
       </Fragment>

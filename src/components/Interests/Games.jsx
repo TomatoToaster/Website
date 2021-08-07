@@ -6,7 +6,7 @@ class Games extends Component {
       <Fragment>
         <h2>Video Games</h2>
         <div className='game-preview'>
-          <a href={'/OneTwo'} target='_blank'>
+          <a href={'https://onetwo.tomatotoaster.com'} target='_blank'>
             <img src='https://raw.githubusercontent.com/TomatoToaster/OneTwo/master/Game_Preview.png'
               className='game-preview-image' />
           </a>
