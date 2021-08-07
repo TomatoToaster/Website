@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "node server.js",
-    "start:dev": "webpack-dev-server",
+    "start": "webpack serve",
     "all": "npm run build && npm start",
-    "cleanBuildOneTwo": "cd OneTwo && npm ci && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

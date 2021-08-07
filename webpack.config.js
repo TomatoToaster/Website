@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 const APP_DIR = path.resolve(__dirname, 'dist');
 const SRC_DIR = path.resolve(__dirname, 'src');
@@ -32,7 +33,7 @@ const config = {
         test: /\.(s*)css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          {loader: 'css-loader', options: {url: false}},
           'sass-loader'
         ],
         exclude: /node_modules/
@@ -52,12 +53,18 @@ const config = {
     }),
     new MiniCssExtractPlugin({
       filename: "styles.css"
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        {from: 'public', to: 'public'},
+      ]
+
+    }),
   ],
 
   devServer: {
-    contentBase: PUB_DIR,
-    historyApiFallback: true
+    historyApiFallback: true,
+    open: true,
   },
 };
 

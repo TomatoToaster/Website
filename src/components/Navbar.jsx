@@ -22,7 +22,7 @@ class Navbar extends Component {
     let activeSubcategory = this.props.match.params.subcategory
     return (
         <ul className="header">
-          <li><NavLink to="/"><img src='/back.png' /></NavLink></li>
+          <li><NavLink to="/"><img src='/public/back.png' /></NavLink></li>
           {SUBCATEGORIES.hasOwnProperty(currentCategory) && (
             SUBCATEGORIES[currentCategory].map(subcategory => NavBarMenuItem(currentCategory)(subcategory, activeSubcategory))
           )}
