@@ -57,6 +57,7 @@ const config = {
     new CopyPlugin({
       patterns: [
         {from: 'public', to: 'public'},
+        {from: 'rootFiles'},
       ]
 
     }),
