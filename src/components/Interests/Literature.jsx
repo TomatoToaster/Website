@@ -5,7 +5,7 @@ class Literature extends Component {
     return (
       <Fragment>
         <h2>Books and Such</h2>
-        <p>Nothing quite yet!</p>
+        <p>Check out my <a href='https://www.goodreads.com/user/show/139135403-tomatotoaster'>Goodreads Profile</a>!</p>
       </Fragment>
     );
   }
