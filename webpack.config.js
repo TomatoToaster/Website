@@ -14,6 +14,10 @@ const config = {
     publicPath: '/',
     filename: 'bundle.js',
   },
+  performance: {
+    maxAssetSize: 350000,
+    maxEntrypointSize: 350000,
+  },
   mode: 'production',
   module: {
     rules: [
