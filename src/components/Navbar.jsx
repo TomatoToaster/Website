@@ -17,7 +17,6 @@ const NavBarMenuItem = (subtopicName) => (name, currentSubcategory) => (
 
 class Navbar extends Component {
   render() {
-    console.log(this.props)
     let currentCategory = this.props.match.params.page
     let activeSubcategory = this.props.match.params.subcategory
     return (

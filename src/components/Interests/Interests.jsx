@@ -8,7 +8,6 @@ import Art from './Art';
 
 class Interests extends Component {
   render() {
-    console.log(this.props.match)
     return (
       <Fragment>
         {!this.props.match.params.interest && (
