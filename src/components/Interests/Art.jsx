@@ -62,13 +62,15 @@ class Art extends Component {
         <div className='pixel-backgrounds'>
           {BACKGROUND_URLS.map(ResizableDigitalArtPiece)}
         </div>
-
+{/* 
+        <--- Congrats you found this commented out stuff I don't really do 3D stuff so don't worry about this right now --->
         <h2>3D Modeling</h2>
         <p>You can view models I've made on <a href={'https://sketchfab.com/6174'}>my sketchfab</a>.</p>
         <p>Here's some rendered output too:</p>
         <div>
           <iframe width="540" height="676" src="https://www.youtube.com/embed/rNZYClvcqv0" title="Sword Dolly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
+*/}
       </Fragment>
     );
   }
