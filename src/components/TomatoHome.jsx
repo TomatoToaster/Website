@@ -36,7 +36,7 @@ class TomatoHome extends Component {
             <NavButton navName="/about" buttonContent="About Me" imgName="profile-card.png" colorClassName='color1' />
             <NavButton navName="/interests" buttonContent="Interests" imgName="heart.png" colorClassName='color2' />
             <OpenLinkButton link='https://github.com/TomatoToaster' buttonContent='GitHub' imgName='github-octocat.png' colorClassName='color3' />
-            <OpenLinkButton link='/public/AmalNazeem_Resume.pdf' buttonContent='Resume' imgName='file.png' colorClassName='color4' />
+            <OpenLinkButton link='https://github.com/TomatoToaster/Website/' buttonContent='Source Code' imgName='file.png' colorClassName='color4' />
           </div>
         </div>
       </Fragment>

@@ -63,7 +63,7 @@ class Art extends Component {
           {BACKGROUND_URLS.map(ResizableDigitalArtPiece)}
         </div>
 {/* 
-        <--- Congrats you found this commented out stuff I don't really do 3D stuff so don't worry about this right now --->
+        <--- Congrats you found this commented out stuff I'm rusty on the 3D stuff so don't look at this, its noobish and cringe --->
         <h2>3D Modeling</h2>
         <p>You can view models I've made on <a href={'https://sketchfab.com/6174'}>my sketchfab</a>.</p>
         <p>Here's some rendered output too:</p>
