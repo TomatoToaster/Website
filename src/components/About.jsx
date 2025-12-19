@@ -16,7 +16,7 @@ class Stuff extends Component {
                 </p>
                 <h2>Contact Me:</h2>
                 <p>
-                    Email: <a href='mailto:amalnazeem@gmail.com'>amalnazeem@gmail.com</a>
+                    Email: <a href='mailto:social@tomatotoaster.com'>social@tomatotoaster.com</a>
                 </p>
             </>
         );
