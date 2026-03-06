@@ -3,18 +3,20 @@
 
 /* Secret Color Assigning */
 $color-tomato: #e43b44;
+$color5: $color-tomato;
 $color0: transparent;
-$color1: #FFC600;
+$color1: #f4b41b;
+$color2: #397b44;
+$color3: #3978a8;
+$color4: #8e478c;
 
-$color2: #2ECB70;
-$color3: #2EAAE2;
-$color4: #313E48;
-
+$PlainBlack: #000000;
+$PlainWhite: #ffffff;
 $PaletteBlack: #302c2e;
-$PaletteWhite: #ffffff;
+$PaletteWhite: #dff6f5;
 $PaletteGray: #5a5353;
 $PaletteBlueText: #3978a8;
-$color-button-text: $PaletteWhite;
+$color-button-text: $PlainWhite;
 
 body {
   background-color: $PaletteBlack;
@@ -46,7 +48,7 @@ body {
 }
 h1, h2, h3, h4, p, ul, li, button {
   font-family: $press-start-2p;
-  color: $PaletteWhite;
+  color: $PlainWhite;
 }
 a {
   font-family: $press-start-2p;
@@ -155,7 +157,7 @@ p {
       list-style-type: none;
       text-transform: capitalize;
       &.active-nav-subcategory {
-        border-bottom: 2px solid $PaletteWhite;
+        border-bottom: 2px solid $PlainWhite;
       }
       a {
         display: block;
@@ -173,7 +175,7 @@ p {
         .navbar-text-button {
           padding: 14px 20px 12px;
           font-size: 0.5em;
-          color: $PaletteWhite;
+          color: $PlainWhite;
           text-decoration: none;
           transition: color 0.2s ease;
           &:hover {
@@ -272,14 +274,14 @@ p {
 
 .sg-title {
   font-size: 1.8em;
-  color: $color1;
+  color: $PlainWhite;
   margin: 0 0 0.75em;
   letter-spacing: 0.06em;
-  text-shadow: 4px 4px 0 darken($color1, 35%);
+  text-shadow: 4px 4px 0 darken($PlainWhite, 60%);
 }
 
 .sg-tagline {
-  color: $PaletteWhite;
+  color: $PlainWhite;
   font-size: 0.5em;
   margin-bottom: 2.2em;
   opacity: 0.65;
@@ -308,13 +310,13 @@ p {
     opacity: 0.6;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: $PaletteWhite;
+    color: $PlainWhite;
     margin-bottom: 0.4em;
   }
 
   &__label {
     font-size: 0.55em;
-    color: $PaletteWhite;
+    color: $PlainWhite;
   }
 
   &__coming-soon {
@@ -390,16 +392,16 @@ p {
     align-items: center;
     justify-content: center;
     font-size: 0.38em;
-    color: $PaletteWhite;
+    color: $PlainWhite;
     opacity: 0.5;
   }
 }
 
 .sg-screenshots .sg-screenshot:nth-child(1) {
-  .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color1; }
+  .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color2; }
 }
 .sg-screenshots .sg-screenshot:nth-child(2) {
-  .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color2; }
+  .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color1; }
 }
 .sg-screenshots .sg-screenshot:nth-child(3) {
   .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color3; }
@@ -410,7 +412,7 @@ p {
   height: 355px;
   background-color: $PaletteGray;
   border: 3px solid $PaletteBlack;
-  box-shadow: 5px 5px 0 $color3;
+  box-shadow: 5px 5px 0 $color4;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -421,7 +423,7 @@ p {
 
   span {
     font-size: 0.42em;
-    color: $PaletteWhite;
+    color: $PlainWhite;
   }
 
   &__sub {
@@ -433,8 +435,9 @@ p {
 .sg-description {
   font-size: 0.5em;
   line-height: 2.4em;
-  color: $PaletteWhite;
+  color: $PlainWhite;
   opacity: 0.75;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {

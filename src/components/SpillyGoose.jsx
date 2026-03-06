@@ -3,6 +3,16 @@ import React, { Component } from 'react';
 const IOS_APP_STORE_URL = null; // Add iOS App Store URL here when ready
 const GOOGLE_PLAY_URL = null;   // Add Google Play URL here when ready
 
+const TAGLINES = [
+  // 'A mobile game about a very messy goose.',
+  'Stack and run as long as you can!',
+  'Steal cups and keep running!',
+  'Cause chaos and chase your high score!',
+  'Hold onto your coffee!',
+];
+
+const tagline = TAGLINES[Math.floor(Math.random() * TAGLINES.length)];
+
 const AppStoreBadge = ({ platform, url }) => {
   const label = platform === 'ios' ? 'App Store' : 'Google Play';
   const sublabel = platform === 'ios' ? 'Download on the' : 'Get it on';
@@ -48,7 +58,7 @@ class SpillyGoose extends Component {
       <div className='sg-page'>
         <div className='sg-hero'>
           <h1 className='sg-title'>Spilly Goose</h1>
-          <p className='sg-tagline'>A mobile game about a very messy goose.</p>
+          <p className='sg-tagline'>{tagline}</p>
           <div className='sg-store-badges'>
             <AppStoreBadge platform='ios' url={IOS_APP_STORE_URL} />
             <AppStoreBadge platform='android' url={GOOGLE_PLAY_URL} />
@@ -65,7 +75,7 @@ class SpillyGoose extends Component {
         </div>
 
         <div className='sg-section'>
-          <h2 className='sg-section-title sg-section-title--blue'>Gameplay</h2>
+          <h2 className='sg-section-title'>Gameplay</h2>
           <div className='sg-video-placeholder'>
             <span>Gameplay Video</span>
             <span className='sg-video-placeholder__sub'>Coming Soon</span>
