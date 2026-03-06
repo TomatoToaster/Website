@@ -6,13 +6,14 @@ class Stuff extends Component {
             <>
                 <h2>Welcome to my Website!</h2>
                 <p>
-                    I'm a Software Engineer/Game Developer living in New York City and currently working at <a href='https://kalecard.com'>Kale</a>.
+                    I'm a Software Engineer/Game Developer living in New York City.
                 </p>
-                <p>
+                {/* It's time retire the college stuff */}
+                {/* <p>
                     I graduated from Northeastern University with a degree in Computer Science/Mathematics.
-                </p>
+                </p> */}
                 <p>
-                    This a personal website I made to review some of the concepts I've learned making websites. It sometimes acts as a playground, but it's meant to give a brief overview of who I am.
+                    This a website I made to give a brief overview of who I am. I'll also be showcasing my games here.
                 </p>
                 <h2>Contact Me:</h2>
                 <p>

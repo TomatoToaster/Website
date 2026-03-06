@@ -15,7 +15,6 @@ const BACKGROUND_URLS = [
 const SPRITE_URLS = [
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Sprites/Cat/CurlyTailCat.gif', altText: 'Curly Tail Cat' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Sprites/Flower/DancingFlower.gif', altText: 'Dancing Flower' },
-  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Sprites/Cat/HappyPenCat.gif', altText: 'Happy Pen Cat' },
 ]
 
 const SPRITE_URLS2 = [
@@ -23,7 +22,6 @@ const SPRITE_URLS2 = [
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/RainBee/BeeEater.gif', altText: 'Bee Eater (a bird)' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/CatCopyPaste/PJ.gif', altText: 'PJ from Cat Copy Paste' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/RainBee/Bee.gif', altText: 'Bee' },
-  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/RainBee/Queen.gif', altText: 'Queen Bee' },
 ]
 const DigitalArtPiece = ({url, altText}) => (
   <img src={url} alt={altText} className="digital-art-piece" />

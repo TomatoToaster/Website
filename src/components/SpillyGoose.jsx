@@ -25,9 +25,20 @@ const AppStoreBadge = ({ platform, url }) => {
   );
 };
 
-const ScreenshotPlaceholder = ({ index }) => (
-  <div className='sg-screenshot-placeholder'>
-    <span>Screenshot {index}</span>
+const Screenshot = ({ index }) => (
+  <div className='sg-screenshot'>
+    <img
+      src={`/public/SpillyGoose/screenshot-${index}.png`}
+      alt={`Screenshot ${index}`}
+      className='sg-screenshot__img'
+      onError={e => {
+        e.target.style.display = 'none';
+        e.target.nextSibling.style.display = 'flex';
+      }}
+    />
+    <div className='sg-screenshot__placeholder'>
+      <span>Coming Soon</span>
+    </div>
   </div>
 );
 
@@ -47,14 +58,14 @@ class SpillyGoose extends Component {
         <div className='sg-section'>
           <h2 className='sg-section-title'>Screenshots</h2>
           <div className='sg-screenshots'>
-            <ScreenshotPlaceholder index={1} />
-            <ScreenshotPlaceholder index={2} />
-            <ScreenshotPlaceholder index={3} />
+            <Screenshot index={1} />
+            <Screenshot index={2} />
+            <Screenshot index={3} />
           </div>
         </div>
 
         <div className='sg-section'>
-          <h2 className='sg-section-title'>Gameplay</h2>
+          <h2 className='sg-section-title sg-section-title--blue'>Gameplay</h2>
           <div className='sg-video-placeholder'>
             <span>Gameplay Video</span>
             <span className='sg-video-placeholder__sub'>Coming Soon</span>
