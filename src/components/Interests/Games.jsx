@@ -7,7 +7,7 @@ class Games extends Component {
             <>
                 <h2>Video Games</h2>
                 <div className='game-preview'>
-                  <NavLink to='/SpillyGoose'>
+                  <NavLink to='/SpillyGoose' className='sg-button-sheen'>
                     <img src='/public/SpillyGoose/SpillyGooseLogoWebsite.png' alt='Spilly Goose' className='sg-corner-logo' onError={e => { e.target.style.display = 'none'; }} />
                   </NavLink>
                 </div>
