@@ -6,6 +6,7 @@ import {
 import Interests from './Interests/Interests';
 import Tomato from './TomatoHome';
 import About from './About';
+import SpillyGoose from './SpillyGoose';
 import Navbar from './Navbar';
 
 
@@ -24,6 +25,7 @@ class App extends Component {
             <div className='page-text-container'>
             <Route path="/about" component={About} />
             <Route path="/interests/:interest?" component={Interests} />
+            <Route path="/SpillyGoose" component={SpillyGoose} />
             </div>
             </div>
             </Fragment>

@@ -4,17 +4,19 @@
 /* Secret Color Assigning */
 $color-tomato: #e43b44;
 $color0: transparent;
-$color1: #FFC600;
+$color1: #f4b41b;
+$color2: #397b44;
+$color3: #3978a8;
+$color4: #8e478c;
+$color5: $color-tomato;
 
-$color2: #2ECB70;
-$color3: #2EAAE2;
-$color4: #313E48;
-
+$PlainBlack: #000000;
+$PlainWhite: #ffffff;
 $PaletteBlack: #302c2e;
-$PaletteWhite: #ffffff;
+$PaletteWhite: #dff6f5;
 $PaletteGray: #5a5353;
 $PaletteBlueText: #3978a8;
-$color-button-text: $PaletteWhite;
+$color-button-text: $PlainWhite;
 
 body {
   background-color: $PaletteBlack;
@@ -46,7 +48,7 @@ body {
 }
 h1, h2, h3, h4, p, ul, li, button {
   font-family: $press-start-2p;
-  color: $PaletteWhite;
+  color: $PlainWhite;
 }
 a {
   font-family: $press-start-2p;
@@ -73,7 +75,8 @@ p {
   transform: translate(-50%, -45%);
   width: 640px;
   height: 640px;
-  background-image: url("/public/TomatoLarge.png");
+  // background-image: url("/public/TomatoLarge.png");
+  background-image: url("/public/TomatoToasterOvenLarge.png");
   background-repeat: no-repeat;
   align-items: center;
   font-size: 16px;
@@ -83,7 +86,7 @@ p {
     justify-content: center;
     align-items: center;
     align-self: center;
-    padding-top: 250px;
+    padding-top: 190px;
 
     a {
       text-decoration: none;
@@ -118,6 +121,8 @@ p {
           pointer-events: none;
           -webkit-transition: opacity .3s ease,-webkit-transform .3s ease;
           transition: opacity .3s ease,transform .3s ease,-webkit-transform .3s ease;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
         }
 
         &:hover {
@@ -143,31 +148,55 @@ p {
 .page-container {
   ul.header {
     display: flex;
-    align-items: center;
-    background-color: $PaletteGray;
+    align-items: stretch;
+    background-color: $PaletteBlack;
+    border-bottom: 2px solid $color1;
     padding: 0;
     overflow-x: auto;
     margin: 0;
     li {
-    display: inline;
-    list-style-type: none;
-    text-transform: capitalize;
-    &.active-nav-subcategory {
-      border-bottom-width: 2;
-      border-bottom-style: solid;
-      border-bottom-color: $PaletteWhite;
-    }
+      display: inline;
+      list-style-type: none;
+      text-transform: capitalize;
+      &:nth-child(4n+2) {
+        &.active-nav-subcategory { box-shadow: inset 0 -2px 0 $color2; a .navbar-text-button { color: $color2; } }
+        a .navbar-text-button:hover { color: $color2; }
+        &.active-nav-subcategory a .navbar-text-button:hover { opacity: 0.7; }
+      }
+      &:nth-child(4n+3) {
+        &.active-nav-subcategory { box-shadow: inset 0 -2px 0 $color3; a .navbar-text-button { color: $color3; } }
+        a .navbar-text-button:hover { color: $color3; }
+        &.active-nav-subcategory a .navbar-text-button:hover { opacity: 0.7; }
+      }
+      &:nth-child(4n+4) {
+        &.active-nav-subcategory { box-shadow: inset 0 -2px 0 $color4; a .navbar-text-button { color: $color4; } }
+        a .navbar-text-button:hover { color: $color4; }
+        &.active-nav-subcategory a .navbar-text-button:hover { opacity: 0.7; }
+      }
+      &:nth-child(4n+5) {
+        &.active-nav-subcategory { box-shadow: inset 0 -2px 0 $color5; a .navbar-text-button { color: $color5; } }
+        a .navbar-text-button:hover { color: $color5; }
+        &.active-nav-subcategory a .navbar-text-button:hover { opacity: 0.7; }
+      }
       a {
-        img{
-          padding: 20
+        display: block;
+        .navbar-back-button {
+          padding: 14px 20px 12px;
+          font-size: 0.8em;
+          color: $PlainWhite;
+          white-space: nowrap;
+          border-left: 3px solid $color1;
+          transition: color 0.2s ease;
+          &:hover {
+            color: $color1;
+          }
         }
         .navbar-text-button {
-          padding-top: 10;
-          padding-bottom: 5;
-          padding-left: 20;
-          padding-right: 20;
-          color: $PaletteWhite;
+          padding: 14px 20px 12px;
+          font-size: 0.8em;
+          color: $PlainWhite;
           text-decoration: none;
+          transition: color 0.2s ease;
         }
       }
     }
@@ -215,6 +244,222 @@ p {
 
 
 
+/* Spilly Goose corner link */
+.sg-corner-link {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  z-index: 100;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.sg-corner-logo {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+  filter: brightness(1.25);
+}
+
+.sg-corner-label {
+  font-family: $press-start-2p;
+  font-size: 0.35em;
+  color: $color1;
+  text-align: center;
+}
+
+/* Spilly Goose page */
+.sg-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-bottom: 5em;
+}
+
+.sg-hero {
+  text-align: center;
+  padding: 3em 0 4em;
+  margin-bottom: 3.5em;
+}
+
+.sg-title {
+  font-size: 1.8em;
+  color: $PlainWhite;
+  margin: 0 0 0.75em;
+  letter-spacing: 0.06em;
+  text-shadow: 4px 4px 0 darken($PlainWhite, 60%);
+}
+
+.sg-tagline {
+  color: $PlainWhite;
+  font-size: 0.5em;
+  margin-bottom: 2.2em;
+  opacity: 0.65;
+  line-height: 2.2em;
+  transition: opacity 0.4s ease;
+
+  &--hidden {
+    opacity: 0;
+  }
+}
+
+.sg-store-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+  flex-wrap: wrap;
+}
+
+.sg-store-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 130px;
+  padding: 0.9em 1.6em;
+  border: 2px solid $PaletteGray;
+  background-color: $PaletteGray;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+  &__sub {
+    font-size: 0.3em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $PlainWhite;
+    margin-bottom: 0.4em;
+  }
+
+  &__label {
+    font-size: 0.55em;
+    color: $PlainWhite;
+  }
+
+  &__coming-soon {
+    font-size: 0.3em;
+    color: $color1;
+    margin-top: 0.6em;
+    letter-spacing: 0.05em;
+  }
+
+  &--active {
+    border-color: $color2;
+    background-color: transparent;
+    text-decoration: none;
+    &:hover {
+      background-color: rgba($color2, 0.12);
+    }
+  }
+
+  &--soon {
+    opacity: 0.45;
+    cursor: default;
+  }
+}
+
+.sg-section {
+  margin-bottom: 4em;
+}
+
+.sg-section-title {
+  font-size: 0.6em;
+  color: $color1;
+  margin-bottom: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  &::before {
+    content: '> ';
+    color: $color2;
+  }
+
+  &--blue {
+    color: $color3;
+    &::before {
+      color: $color3;
+    }
+  }
+}
+
+.sg-screenshots {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sg-screenshot {
+  flex-shrink: 0;
+
+  &__img {
+    width: 155px;
+    height: auto;
+    display: block;
+    border: 2px solid $PaletteBlack;
+  }
+
+  &__placeholder {
+    width: 155px;
+    height: 336px;
+    background-color: $PaletteGray;
+    border: 2px solid $PaletteBlack;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.38em;
+    color: $PlainWhite;
+    opacity: 0.5;
+  }
+}
+
+.sg-screenshots .sg-screenshot:nth-child(1) {
+  .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color2; }
+}
+.sg-screenshots .sg-screenshot:nth-child(2) {
+  .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color1; }
+}
+.sg-screenshots .sg-screenshot:nth-child(3) {
+  .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color3; }
+}
+
+.sg-video-placeholder {
+  width: 200px;
+  height: 355px;
+  background-color: $PaletteGray;
+  border: 3px solid $PaletteBlack;
+  box-shadow: 5px 5px 0 $color4;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8em;
+  opacity: 0.5;
+
+  span {
+    font-size: 0.42em;
+    color: $PlainWhite;
+  }
+
+  &__sub {
+    color: $color3 !important;
+    font-size: 0.36em !important;
+  }
+}
+
+.sg-description {
+  font-size: 0.5em;
+  line-height: 2.4em;
+  color: $PlainWhite;
+  opacity: 0.75;
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
   body {
     padding: 0;
@@ -233,11 +478,12 @@ p {
   }
 
   .tomato {
-    background-image: url("/public/TomatoSmall.png");
+    // background-image: url("/public/TomatoSmall.png");
+    background-image: url("/public/TomatoToasterOvenSmall.png");
     width: 320px;
     height: 320px;
     .menu {
-      padding-top: 150px;
+      padding-top: 135px;
       flex-direction: row;
 
       a {

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
+import SpillyGooseButton from './SpillyGooseButton';
 
 const NavButton = ({navName, buttonContent, imgName, colorClassName='color0'}) => (
   <NavLink to={navName}>
@@ -31,12 +32,12 @@ class TomatoHome extends Component {
   render() {
     return (
       <Fragment>
+        <SpillyGooseButton />
         <div className="tomato">
           <div className="menu">
             <NavButton navName="/about" buttonContent="About Me" imgName="profile-card.png" colorClassName='color1' />
             <NavButton navName="/interests" buttonContent="Interests" imgName="heart.png" colorClassName='color2' />
             <OpenLinkButton link='https://github.com/TomatoToaster' buttonContent='GitHub' imgName='github-octocat.png' colorClassName='color3' />
-            <OpenLinkButton link='https://github.com/TomatoToaster/Website/' buttonContent='Source Code' imgName='file.png' colorClassName='color4' />
           </div>
         </div>
       </Fragment>
