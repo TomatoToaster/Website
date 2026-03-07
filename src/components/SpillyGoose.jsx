@@ -11,8 +11,6 @@ const TAGLINES = [
   'Hold onto your coffee!',
 ];
 
-const tagline = TAGLINES[Math.floor(Math.random() * TAGLINES.length)];
-
 const AppStoreBadge = ({ platform, url }) => {
   const label = platform === 'ios' ? 'App Store' : 'Google Play';
   const sublabel = platform === 'ios' ? 'Download on the' : 'Get it on';
@@ -53,12 +51,37 @@ const Screenshot = ({ index }) => (
 );
 
 class SpillyGoose extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      taglineIndex: Math.floor(Math.random() * TAGLINES.length),
+      visible: true,
+    };
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.setState({ visible: false });
+      setTimeout(() => {
+        this.setState(prev => ({
+          taglineIndex: (prev.taglineIndex + 1) % TAGLINES.length,
+          visible: true,
+        }));
+      }, 400);
+    }, 3500);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   render() {
+    const { taglineIndex, visible } = this.state;
     return (
       <div className='sg-page'>
         <div className='sg-hero'>
           <h1 className='sg-title'>Spilly Goose</h1>
-          <p className='sg-tagline'>{tagline}</p>
+          <p className={`sg-tagline${visible ? '' : ' sg-tagline--hidden'}`}>{TAGLINES[taglineIndex]}</p>
           <div className='sg-store-badges'>
             <AppStoreBadge platform='ios' url={IOS_APP_STORE_URL} />
             <AppStoreBadge platform='android' url={GOOGLE_PLAY_URL} />
