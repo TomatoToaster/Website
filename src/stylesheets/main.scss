@@ -505,10 +505,11 @@ p {
 }
 
 @keyframes mobile-wiggle {
-  0%, 10%, 100% { transform: rotate(0deg); }
-  2.5%          { transform: rotate(-14deg); }
-  5%            { transform: rotate(14deg); }
-  7.5%          { transform: rotate(-7deg); }
+  0%, 14%, 100% { transform: rotate(0deg) scale(1); }
+  2%            { transform: rotate(-22deg) scale(1.15); }
+  5%            { transform: rotate(22deg) scale(1.15); }
+  8%            { transform: rotate(-16deg) scale(1.1); }
+  11%           { transform: rotate(10deg) scale(1.05); }
 }
 
 @media only screen and (max-width: 768px) {
@@ -551,9 +552,9 @@ p {
             transform: scale(1);
           }
         }
-        &:nth-child(1) .fade-button { animation: mobile-wiggle 8s ease-in-out 1s infinite; }
-        &:nth-child(2) .fade-button { animation: mobile-wiggle 8s ease-in-out 2s infinite; }
-        &:nth-child(3) .fade-button { animation: mobile-wiggle 8s ease-in-out 3s infinite; }
+        &:nth-child(1) .fade-button { animation: mobile-wiggle 5s ease-in-out 0.5s infinite; }
+        &:nth-child(2) .fade-button { animation: mobile-wiggle 5s ease-in-out 1.2s infinite; }
+        &:nth-child(3) .fade-button { animation: mobile-wiggle 5s ease-in-out 1.9s infinite; }
       }
     }
   }
