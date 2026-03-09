@@ -26,6 +26,8 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/interests/:interest?" component={Interests} />
             <Route path="/SpillyGoose" component={SpillyGoose} />
+            <Route path="/privacy" component={() => { window.location.replace('/public/privacy.html'); return null; }} />
+            <Route path="/support" component={() => { window.location.replace('/public/support.html'); return null; }} />
             </div>
             </div>
             </Fragment>

@@ -324,7 +324,9 @@ p {
 .sg-page {
   max-width: 760px;
   margin: 0 auto;
-  padding-bottom: 5em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .sg-hero {
@@ -504,6 +506,30 @@ p {
   color: $PlainWhite;
   opacity: 0.75;
   text-align: center;
+}
+
+.sg-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 2em 0 1em;
+  border-top: 1px solid $PaletteGray;
+  margin-top: auto;
+  font-size: 0.38em;
+  opacity: 0.5;
+  a {
+    color: $PlainWhite;
+    &:hover {
+      color: $color1;
+    }
+  }
+  &__sep {
+    color: $PaletteGray;
+  }
+  &__copy {
+    color: $PlainWhite;
+  }
 }
 
 @keyframes mobile-wiggle {
