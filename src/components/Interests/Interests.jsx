@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Route } from 'react-router-dom';
 
-import Film from './Film';
-import Literature from './Literature';
+// import Film from './Film';
+// import Literature from './Literature';
 import Games from './Games';
 import Art from './Art';
 
@@ -16,8 +16,8 @@ class Interests extends Component {
 
         <Route path='/interests/art' component={Art} />
         <Route path='/interests/games' component={Games} />
-        <Route path='/interests/film' component={Film} />
-        <Route path='/interests/literature' component={Literature} />
+        {/* <Route path='/interests/film' component={Film} /> */}
+        {/* <Route path='/interests/literature' component={Literature} /> */}
       </Fragment>
     );
   }

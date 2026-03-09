@@ -1,1 +1,1 @@
-export default ['art', 'games', 'film', 'literature'];
+export default ['art', 'games'/*, 'film', 'literature'*/];

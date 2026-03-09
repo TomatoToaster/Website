@@ -151,6 +151,8 @@ p {
     align-items: stretch;
     background-color: $PaletteBlack;
     border-bottom: 2px solid $color1;
+    border-left: 3px solid $color1;
+    border-right: 3px solid $color1;
     padding: 0;
     overflow-x: auto;
     margin: 0;
@@ -158,6 +160,7 @@ p {
       display: inline;
       list-style-type: none;
       text-transform: capitalize;
+
       &:nth-child(4n+2) {
         &.active-nav-subcategory { box-shadow: inset 0 -2px 0 $color2; a .navbar-text-button { color: $color2; } }
         a .navbar-text-button:hover { color: $color2; }
@@ -185,7 +188,6 @@ p {
           font-size: 0.8em;
           color: $PlainWhite;
           white-space: nowrap;
-          border-left: 3px solid $color1;
           transition: color 0.2s ease;
           &:hover {
             color: $color1;
@@ -505,11 +507,11 @@ p {
 }
 
 @keyframes mobile-wiggle {
-  0%, 14%, 100% { transform: rotate(0deg) scale(1); }
-  2%            { transform: rotate(-22deg) scale(1.15); }
-  5%            { transform: rotate(22deg) scale(1.15); }
-  8%            { transform: rotate(-16deg) scale(1.1); }
-  11%           { transform: rotate(10deg) scale(1.05); }
+  0%, 14%, 100% { transform: rotate(0deg); }
+  2%            { transform: rotate(-22deg); }
+  5%            { transform: rotate(22deg); }
+  8%            { transform: rotate(-16deg); }
+  11%           { transform: rotate(10deg); }
 }
 
 @media only screen and (max-width: 768px) {
