@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SgFooter from './SgFooter';
+import GameFooter from './GameFooter';
 
 const IOS_APP_STORE_URL = null; // Add iOS App Store URL here when ready
 const GOOGLE_PLAY_URL = null;   // Add Google Play URL here when ready
@@ -112,7 +112,7 @@ class SpillyGoose extends Component {
             Spilly Goose is coming soon. Check back here for more details!
           </p>
         </div>
-        <SgFooter />
+        <GameFooter />
       </div>
     );
   }

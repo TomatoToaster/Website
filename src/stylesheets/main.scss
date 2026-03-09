@@ -508,7 +508,7 @@ p {
   text-align: center;
 }
 
-.sg-footer {
+.page-footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -590,6 +590,14 @@ p {
   .sg-corner-logo {
     width: 64px;
     height: 64px;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    gap: 0.6em;
+    &__sep {
+      display: none;
+    }
   }
 
   /* frame for itch.io game preview */
