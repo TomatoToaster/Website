@@ -6,7 +6,7 @@ const GameFooter = () => (
     <span className='page-footer__sep'>·</span>
     <a href='/public/privacy.html' target='_blank'>Privacy Policy</a>
     <span className='page-footer__sep'>·</span>
-    <span className='page-footer__copy'>© 2026 TomatoToaster</span>
+    <span className='page-footer__copy'>© 2026 Amal Nazeem</span>
   </footer>
 );
 

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import GameFooter from './GameFooter';
+import SpillyGooseDevlog from './SpillyGooseDevlog';
+import SpillyGooseDevlogEntry from './SpillyGooseDevlogEntry';
 
 const IOS_APP_STORE_URL = null; // Add iOS App Store URL here when ready
 const GOOGLE_PLAY_URL = null;   // Add Google Play URL here when ready
@@ -80,6 +83,11 @@ class SpillyGoose extends Component {
     const { taglineIndex, visible } = this.state;
     return (
       <div className='sg-page'>
+        <Switch>
+          <Route path='/SpillyGoose/Devlog/:date' component={SpillyGooseDevlogEntry} />
+          <Route exact path='/SpillyGoose/Devlog' component={SpillyGooseDevlog} />
+          <Route exact path='/SpillyGoose'><Redirect to='/SpillyGoose/Game' /></Route>
+          <Route path='/SpillyGoose/Game'>
         <div className='sg-hero'>
           <h1 className='sg-title'>Spilly Goose</h1>
           <p className={`sg-tagline${visible ? '' : ' sg-tagline--hidden'}`}>{TAGLINES[taglineIndex]}</p>
@@ -112,6 +120,8 @@ class SpillyGoose extends Component {
             Spilly Goose is coming soon. Check back here for more details!
           </p>
         </div>
+          </Route>
+        </Switch>
         <GameFooter />
       </div>
     );

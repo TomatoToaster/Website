@@ -4,7 +4,8 @@ import InterestCategories from './Interests/Categories';
 import classNames from 'classnames';
 
 const SUBCATEGORIES = {
-  'interests': InterestCategories
+  'interests': InterestCategories,
+  'SpillyGoose': ['Game', 'Devlog'],
 }
 
 const NavBarMenuItem = (subtopicName) => (name, currentSubcategory) => (
