@@ -657,9 +657,9 @@ p {
             transform: scale(1);
           }
         }
-        &:nth-child(1) .fade-button { animation: mobile-wiggle 5s ease-in-out 0.5s infinite; }
-        &:nth-child(2) .fade-button { animation: mobile-wiggle 5s ease-in-out 1.2s infinite; }
-        &:nth-child(3) .fade-button { animation: mobile-wiggle 5s ease-in-out 1.9s infinite; }
+        &:nth-child(1) .fade-button { animation: mobile-wiggle 5s ease-in-out 2.0s infinite; }
+        &:nth-child(2) .fade-button { animation: mobile-wiggle 5s ease-in-out 2.7s infinite; }
+        &:nth-child(3) .fade-button { animation: mobile-wiggle 5s ease-in-out 3.4s infinite; }
       }
     }
   }
