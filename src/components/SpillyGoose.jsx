@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import GameFooter from './GameFooter';
 import SpillyGooseDevlog from './SpillyGooseDevlog';
 import SpillyGooseDevlogEntry from './SpillyGooseDevlogEntry';
+import Lightbox from './Lightbox';
 
 const IOS_APP_STORE_URL = null; // Add iOS App Store URL here when ready
 const GOOGLE_PLAY_URL = null;   // Add Google Play URL here when ready
+const VIDEO_URL = null;         // Add gameplay video URL here when ready
 
 const IOS_TESTER_URL = 'https://tally.so/r/jaMr8a';
 const ANDROID_TESTER_URL = 'https://tally.so/r/lbAjGB';
@@ -45,51 +47,79 @@ const AppStoreBadge = ({ platform, url, testerUrl }) => {
   );
 };
 
-const Screenshot = ({ index }) => (
-  <div className='sg-screenshot'>
-    <img
-      src={`/public/SpillyGoose/screenshot-${index}.png`}
-      alt={`Screenshot ${index}`}
-      className='sg-screenshot__img'
-      onError={e => {
-        e.target.style.display = 'none';
-        e.target.nextSibling.style.display = 'flex';
-      }}
-    />
-    <div className='sg-screenshot__placeholder'>
-      <span>Coming Soon</span>
-    </div>
-  </div>
-);
+const Screenshot = ({ index }) => {
+  const [loaded, setLoaded] = useState(false);
+  const [open, setOpen] = useState(false);
+  const src = `/public/SpillyGoose/screenshot-${index}.png`;
 
-class SpillyGoose extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      taglineIndex: Math.floor(Math.random() * TAGLINES.length),
-      visible: true,
-    };
+  return (
+    <div
+      className={`sg-screenshot${loaded ? ' sg-screenshot--clickable' : ''}`}
+      onClick={loaded ? () => setOpen(true) : undefined}
+    >
+      <img
+        src={src}
+        alt={`Screenshot ${index}`}
+        className='sg-screenshot__img'
+        onLoad={() => setLoaded(true)}
+        onError={e => {
+          e.target.style.display = 'none';
+          e.target.nextSibling.style.display = 'flex';
+        }}
+      />
+      <div className='sg-screenshot__placeholder'>
+        <span>Coming Soon</span>
+      </div>
+      {loaded && (
+        <Lightbox open={open} onClose={() => setOpen(false)}>
+          <img src={src} alt={`Screenshot ${index} fullscreen`} />
+        </Lightbox>
+      )}
+    </div>
+  );
+};
+
+const VideoSection = () => {
+  const [open, setOpen] = useState(false);
+
+  if (VIDEO_URL) {
+    return (
+      <div
+        className='sg-video-placeholder sg-screenshot--clickable'
+        onClick={() => setOpen(true)}
+      >
+        <span>Gameplay Video</span>
+        <Lightbox open={open} onClose={() => setOpen(false)}>
+          <video src={VIDEO_URL} controls autoPlay />
+        </Lightbox>
+      </div>
+    );
   }
 
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState({ visible: false });
+  return (
+    <div className='sg-video-placeholder'>
+      <span>Gameplay Video</span>
+      <span className='sg-video-placeholder__sub'>Coming Soon</span>
+    </div>
+  );
+};
+
+function SpillyGoose() {
+  const [taglineIndex, setTaglineIndex] = useState(() => Math.floor(Math.random() * TAGLINES.length));
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(false);
       setTimeout(() => {
-        this.setState(prev => ({
-          taglineIndex: (prev.taglineIndex + 1) % TAGLINES.length,
-          visible: true,
-        }));
+        setTaglineIndex(i => (i + 1) % TAGLINES.length);
+        setVisible(true);
       }, 400);
     }, 3500);
-  }
+    return () => clearInterval(interval);
+  }, []);
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
-  render() {
-    const { taglineIndex, visible } = this.state;
-    return (
+  return (
       <div className='sg-page'>
         <Switch>
           <Route path='/SpillyGoose/Devlog/:date' component={SpillyGooseDevlogEntry} />
@@ -116,10 +146,7 @@ class SpillyGoose extends Component {
 
         <div className='sg-section'>
           <h2 className='sg-section-title'>Gameplay</h2>
-          <div className='sg-video-placeholder'>
-            <span>Gameplay Video</span>
-            <span className='sg-video-placeholder__sub'>Coming Soon</span>
-          </div>
+          <VideoSection />
         </div>
 
         <div className='sg-section'>
@@ -132,8 +159,7 @@ class SpillyGoose extends Component {
         </Switch>
         <GameFooter />
       </div>
-    );
-  }
+  );
 }
 
 export default SpillyGoose;

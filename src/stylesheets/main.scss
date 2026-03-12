@@ -405,7 +405,6 @@ p {
   }
 
   &--soon {
-    opacity: 0.45;
     cursor: default;
   }
 
@@ -453,6 +452,8 @@ p {
 .sg-screenshot {
   flex-shrink: 0;
 
+  &--clickable { cursor: pointer; }
+
   &__img {
     width: 155px;
     height: auto;
@@ -496,7 +497,6 @@ p {
   align-items: center;
   justify-content: center;
   gap: 0.8em;
-  opacity: 0.5;
 
   span {
     font-size: 0.42em;
@@ -506,6 +506,42 @@ p {
   &__sub {
     color: $color3 !important;
     font-size: 0.36em !important;
+  }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+
+  &__close {
+    position: absolute;
+    top: 1.2em;
+    right: 1.2em;
+    background: none;
+    border: none;
+    color: $PlainWhite;
+    font-size: 1.5em;
+    cursor: pointer;
+    opacity: 0.75;
+    line-height: 1;
+    padding: 0.2em 0.4em;
+    &:hover { opacity: 1; }
+  }
+
+  &__content {
+    cursor: default;
+    img, video {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      display: block;
+    }
   }
 }
 
