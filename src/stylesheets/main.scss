@@ -408,6 +408,15 @@ p {
     opacity: 0.45;
     cursor: default;
   }
+
+  &__tester {
+    font-size: 0.28em;
+    color: $color1;
+    margin-top: 0.8em;
+    text-decoration: underline;
+    opacity: 0.85;
+    &:hover { opacity: 1; }
+  }
 }
 
 .sg-section {

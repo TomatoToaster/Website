@@ -5,7 +5,7 @@ function SpillyGooseDevlog() {
   const [entries, setEntries] = useState(null);
 
   useEffect(() => {
-    fetch('/public/devlogs/SpillyGoose/index.json')
+    fetch('/public/SpillyGoose/devlogs/index.json')
       .then(r => r.json())
       .then(data => setEntries(data))
       .catch(() => setEntries([]));

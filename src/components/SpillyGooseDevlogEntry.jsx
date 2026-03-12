@@ -10,14 +10,14 @@ function SpillyGooseDevlogEntry() {
   useEffect(() => {
     let cancelled = false;
 
-    fetch('/public/devlogs/SpillyGoose/index.json')
+    fetch('/public/SpillyGoose/devlogs/index.json')
       .then(r => r.json())
       .then(data => {
         if (cancelled) return;
         const found = data.find(e => e.date === date);
         if (!found) { setNotFound(true); return; }
         setEntry(found);
-        return fetch(`/public/devlogs/SpillyGoose/${date}.html`)
+        return fetch(`/public/SpillyGoose/devlogs/${date}.html`)
           .then(r => {
             if (!r.ok) { setNotFound(true); return; }
             return r.text();
