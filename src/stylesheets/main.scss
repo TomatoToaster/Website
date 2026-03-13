@@ -605,8 +605,18 @@ p {
     color: $PlainWhite;
     margin: 1.8em 0 0.8em;
     letter-spacing: 0.05em;
-    border-bottom: 2px solid $color1;
     padding-bottom: 0.4em;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: $color1;
+    }
   }
   h3 {
     font-size: 1.2em;
