@@ -576,7 +576,7 @@ p {
 }
 
 .sg-devlog-list__title {
-  font-size: 0.5em;
+  font-size: 0.7em;
   color: $PlainWhite;
 }
 
@@ -592,7 +592,36 @@ p {
   opacity: 0.85;
 
   p { margin-bottom: 1.2em; }
-  h3 { color: $color1; margin: 1.5em 0 0.6em; }
+
+  h1 {
+    font-size: 2em;
+    color: $PlainWhite;
+    margin: 1.6em 0 0.8em;
+    letter-spacing: 0.04em;
+    text-shadow: 3px 3px 0 darken($PlainWhite, 60%);
+  }
+  h2 {
+    font-size: 1.5em;
+    color: $PlainWhite;
+    margin: 1.8em 0 0.8em;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid $color1;
+    padding-bottom: 0.4em;
+  }
+  h3 {
+    font-size: 1.2em;
+    color: $color1;
+    margin: 1.5em 0 0.8em;
+    &::before { content: '> '; color: $color1; opacity: 0.5; }
+  }
+  h4 {
+    font-size: 0.9em;
+    color: $PlainWhite;
+    opacity: 0.6;
+    margin: 1.2em 0 0.5em;
+    letter-spacing: 0.05em;
+  }
+
   img { max-width: 100%; height: auto; display: block; margin: 1.2em 0; }
   ul, ol { padding-left: 1.5em; margin-bottom: 1.2em; }
 }
