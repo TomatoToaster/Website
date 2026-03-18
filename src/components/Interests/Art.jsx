@@ -15,6 +15,7 @@ const BACKGROUND_URLS = [
 const SPRITE_URLS = [
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Sprites/Cat/CurlyTailCat.gif', altText: 'Curly Tail Cat' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Sprites/Flower/DancingFlower.gif', altText: 'Dancing Flower' },
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/SpillyGoose/MarkIngPortrait.gif', altText: 'Mark Ing Portrait' },
 ]
 
 const SPRITE_URLS2 = [
