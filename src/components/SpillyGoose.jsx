@@ -141,6 +141,7 @@ function SpillyGoose() {
             <Screenshot index={1} />
             <Screenshot index={2} />
             <Screenshot index={3} />
+            <Screenshot index={4} />
           </div>
         </div>
 

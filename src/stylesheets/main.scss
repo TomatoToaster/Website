@@ -484,6 +484,9 @@ p {
 .sg-screenshots .sg-screenshot:nth-child(3) {
   .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color3; }
 }
+.sg-screenshots .sg-screenshot:nth-child(4) {
+  .sg-screenshot__img, .sg-screenshot__placeholder { box-shadow: 3px 3px 0 $color5; }
+}
 
 .sg-video-placeholder {
   width: 200px;
