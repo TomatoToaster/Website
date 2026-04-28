@@ -1,23 +1,17 @@
 import React, { Component, Fragment } from 'react';
 import { Route } from 'react-router-dom';
-
-// import Film from './Film';
-// import Literature from './Literature';
-import Games from './Games';
-import Art from './Art';
+import Film from './Film';
+import Literature from './Literature';
 
 class Interests extends Component {
   render() {
     return (
       <Fragment>
-        {!this.props.match.params.interest && (
-          <p>Please click on one of the above to learn more about my interests and see some of my work!</p>
+        {!this.props.match.params.category && (
+          <p>Please click on one of the above to learn more about my interests!</p>
         )}
-
-        <Route path='/interests/art' component={Art} />
-        <Route path='/interests/games' component={Games} />
-        {/* <Route path='/interests/film' component={Film} /> */}
-        {/* <Route path='/interests/literature' component={Literature} /> */}
+        <Route path='/interests/film' component={Film} />
+        <Route path='/interests/literature' component={Literature} />
       </Fragment>
     );
   }

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import InterestCategories from './Interests/Categories';
+import PortfolioCategories from './Portfolio/PortfolioCategories';
+import InterestCategories from './Interests/InterestCategories';
 import classNames from 'classnames';
 
 const SUBCATEGORIES = {
+  'portfolio': PortfolioCategories,
   'interests': InterestCategories,
   'SpillyGoose': ['Game', 'Devlog'],
 }

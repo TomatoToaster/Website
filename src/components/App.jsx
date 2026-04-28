@@ -3,6 +3,7 @@ import {
     Route,
     BrowserRouter,
 } from 'react-router-dom';
+import Portfolio from './Portfolio/Portfolio';
 import Interests from './Interests/Interests';
 import Tomato from './TomatoHome';
 import About from './About';
@@ -24,7 +25,8 @@ class App extends Component {
             <Route path="/:page/:subcategory?" component={Navbar} />
             <div className='page-text-container'>
             <Route path="/about" component={About} />
-            <Route path="/interests/:interest?" component={Interests} />
+            <Route path="/portfolio/:category?" component={Portfolio} />
+            <Route path="/interests/:category?" component={Interests} />
             <Route path="/SpillyGoose" component={SpillyGoose} />
             <Route path="/privacy" component={() => { window.location.replace('/public/privacy.html'); return null; }} />
             <Route path="/support" component={() => { window.location.replace('/public/support.html'); return null; }} />
