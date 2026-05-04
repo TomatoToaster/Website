@@ -13,15 +13,13 @@ class Games extends Component {
                 </div>
                 <div className='game-preview'>
                 <p>Also, as featured on my <a href={'https://tomatotoaster.itch.io'}>itch.io</a>:</p>
-                <p><iframe className='itchFrame' width="552" height="167" frameborder="0" src="https://itch.io/embed/3110297?bg_color=7d7071&amp;fg_color=302c2e&amp;link_color=e6482e&amp;border_color=615973"><a href="https://tomatotoaster.itch.io/rainbee">Rainbee (Demo) by TomatoToaster</a></iframe></p>
+                <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/4534277?bg_color=397b44&amp;fg_color=ffffff&amp;link_color=ffaeb6&amp;border_color=2a5e32"><a href="https://tomatotoaster.itch.io/web-developer">Web Developer by TomatoToaster</a></iframe></p>
+                <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/3110297?bg_color=7d7071&amp;fg_color=302c2e&amp;link_color=e6482e&amp;border_color=615973"><a href="https://tomatotoaster.itch.io/rainbee">Rainbee (Demo) by TomatoToaster</a></iframe></p>
                 <p>
-                <iframe className='itchFrame' width="552" height="167" frameborder="0" src="https://itch.io/embed/2333531?dark=true"><a href="https://tomatotoaster.itch.io/video-room">Video Room by TomatoToaster</a></iframe>
+                <iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/1654950?dark=true"><a href="https://tomatotoaster.itch.io/stardustin">Stardustin by TomatoToaster</a></iframe>
                 </p>
                 <p>
-                <iframe className='itchFrame' width="552" height="167" frameborder="0" src="https://itch.io/embed/1654950?dark=true"><a href="https://tomatotoaster.itch.io/stardustin">Stardustin by TomatoToaster</a></iframe>
-                </p>
-                <p>
-                <iframe className='itchFrame' width="552" height="167" frameborder="0" src="https://itch.io/embed/2160954?dark=true"><a href="https://tomatotoaster.itch.io/fishing-boots">Fishing Boots by TomatoToaster</a></iframe>
+                <iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/2160954?dark=true"><a href="https://tomatotoaster.itch.io/fishing-boots">Fishing Boots by TomatoToaster</a></iframe>
                 </p>
                 <p>
                 Or try this game that I've hosted on my website by clicking below:
