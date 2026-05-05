@@ -15,6 +15,7 @@ $PlainWhite: #ffffff;
 $PaletteBlack: #302c2e;
 $PaletteWhite: #dff6f5;
 $PaletteGray: #5a5353;
+$PaletteLightGray: #cfc6b8;
 $PaletteBlueText: #3978a8;
 $color-button-text: $PlainWhite;
 
@@ -276,23 +277,6 @@ p {
   }
 }
 
-.sg-corner-link {
-  position: fixed;
-  bottom: 1.5em;
-  right: 1.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5em;
-  text-decoration: none;
-  z-index: 100;
-  transition: opacity 0.2s ease;
-  @include sg-sheen-effect;
-  &:hover {
-    opacity: 0.75;
-  }
-}
-
 .sg-button-sheen {
   position: relative;
   display: inline-flex;
@@ -313,11 +297,90 @@ p {
   filter: brightness(1.25);
 }
 
-.sg-corner-label {
-  font-family: $press-start-2p;
-  font-size: 0.35em;
-  color: $color1;
-  text-align: center;
+.promo-button {
+  position: fixed;
+  bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  z-index: 100;
+
+  &--right { right: 1.5em; }
+  &--left  { left: 1.5em; }
+
+  &__badges {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    color: $PaletteLightGray;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__badge {
+    position: relative;
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+    cursor: default;
+
+    &::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: $PaletteBlack;
+      color: $PaletteWhite;
+      font-family: $press-start-2p;
+      font-size: 8px;
+      line-height: 1.4;
+      white-space: nowrap;
+      padding: 4px 7px;
+      border: 1px solid $PaletteGray;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      z-index: 101;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    &:hover { opacity: 0.75; }
+  }
+
+  &__btn {
+    position: relative;
+    @include sg-sheen-effect;
+  }
+
+  &__img {
+    width: 96px;
+    height: 96px;
+    image-rendering: pixelated;
+    filter: brightness(1.25);
+    display: block;
+  }
+
+  &__label {
+    display: none;
+    font-family: $press-start-2p;
+    font-size: 0.35em;
+    color: $color1;
+    text-align: center;
+    padding: 4px;
+  }
 }
 
 /* Spilly Goose page */
@@ -754,6 +817,16 @@ p {
   .sg-corner-logo {
     width: 64px;
     height: 64px;
+  }
+
+  .promo-button__img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .promo-button__badges svg {
+    width: 13px;
+    height: 13px;
   }
 
   .page-footer {
