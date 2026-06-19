@@ -15,9 +15,13 @@ const BACKGROUND_URLS = [
 const SPRITE_URLS = [
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Sprites/Flower/DancingFlower.gif', altText: 'Dancing Flower' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/SpillyGoose/MarkIngPortrait.gif', altText: 'Mark Ing Portrait' },
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/WebDeveloper/DetectiveDog.gif', altText: 'Detective Dog Portrait' },
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/WebDeveloper/HatCat.gif', altText: 'Hat Cat Portrait' },
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/WebDeveloper/SpiderPortrait.gif', altText: 'Spider Portrait' },
 ]
 
 const SPRITE_URLS2 = [
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/WebDeveloper/Bubble.gif', altText: 'Bubble' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/RainBee/BeeEater.gif', altText: 'Bee Eater (a bird)' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/CatCopyPaste/PJ.gif', altText: 'PJ from Cat Copy Paste' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/RainBee/Bee.gif', altText: 'Bee' },
