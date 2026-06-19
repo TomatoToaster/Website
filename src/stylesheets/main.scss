@@ -297,6 +297,73 @@ p {
   filter: brightness(1.25);
 }
 
+.sg-portfolio-logo {
+  width: 150px;
+  height: 150px;
+  image-rendering: pixelated;
+  filter: brightness(1.25);
+}
+
+.portfolio-section-gap {
+  padding: 5em 0;
+}
+
+.currently-working-header {
+  color: $color1;
+  text-align: center;
+  border-top: 2px solid $color1;
+  border-bottom: 2px solid $color1;
+  padding: 8px 24px;
+  margin: 16px auto;
+  width: max-content;
+}
+
+
+.games-section-header {
+  color: $PaletteLightGray;
+  text-align: center;
+  border-top: 2px solid $PaletteGray;
+  border-bottom: 2px solid $PaletteGray;
+  padding: 8px 24px;
+  margin: 16px auto;
+  width: max-content;
+}
+
+.currently-working-on {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.gif-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+
+  &__btn {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    &:hover { opacity: 0.75; }
+  }
+
+  .promo-button__img {
+    width: auto;
+    height: 160px;
+  }
+}
+
 .promo-button {
   position: fixed;
   bottom: 1.5em;
@@ -366,8 +433,8 @@ p {
   }
 
   &__img {
-    width: 96px;
-    height: 96px;
+    width: auto;
+    height: 160px;
     image-rendering: pixelated;
     filter: brightness(1.25);
     display: block;
@@ -819,9 +886,14 @@ p {
     height: 64px;
   }
 
+  .sg-portfolio-logo {
+    width: 100px;
+    height: 100px;
+  }
+
   .promo-button__img {
-    width: 64px;
-    height: 64px;
+    width: auto;
+    height: 110px;
   }
 
   .promo-button__badges svg {

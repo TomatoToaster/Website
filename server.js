@@ -19,7 +19,7 @@ const front_end_handler = function(request, response) {
 }
 
 // These are the routes that should point to the front end
-const front_end_routes = ['/', '/about', '/portfolio/:category?', '/interests/:category?'];
+const front_end_routes = ['/', '/about', '/portfolio', '/portfolio-sections/:category?', '/interests/:category?'];
 
 // Now we are using the handler for each of the front end routes
 front_end_routes.forEach(route => app.get(route, front_end_handler));

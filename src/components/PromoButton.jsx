@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { BadgeList } from './GifButton';
 
 const PromoButton = ({ to, href, imgSrc, imgAlt, badges = [], position = 'right', badgeColor }) => {
   const btn = (
@@ -23,20 +24,7 @@ const PromoButton = ({ to, href, imgSrc, imgAlt, badges = [], position = 'right'
 
   return (
     <div className={`promo-button promo-button--${position}`}>
-      {badges.length > 0 && (
-        <div className="promo-button__badges" style={badgeColor ? { color: badgeColor } : undefined}>
-          {badges.map((badge, i) => (
-            <span
-              key={i}
-              className="promo-button__badge"
-              title={badge.label}
-              {...(badge.tooltip ? { 'data-tooltip': badge.tooltip } : {})}
-            >
-              {badge.icon}
-            </span>
-          ))}
-        </div>
-      )}
+      <BadgeList badges={badges} color={badgeColor} />
       {linkedBtn}
     </div>
   );

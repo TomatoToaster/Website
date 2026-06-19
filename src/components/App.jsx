@@ -4,6 +4,7 @@ import {
     BrowserRouter,
 } from 'react-router-dom';
 import Portfolio from './Portfolio/Portfolio';
+import PortfolioSections from './Portfolio/PortfolioSections';
 import Interests from './Interests/Interests';
 import Tomato from './TomatoHome';
 import About from './About';
@@ -25,7 +26,8 @@ class App extends Component {
             <Route path="/:page/:subcategory?" component={Navbar} />
             <div className='page-text-container'>
             <Route path="/about" component={About} />
-            <Route path="/portfolio/:category?" component={Portfolio} />
+            <Route path="/portfolio" exact component={Portfolio} />
+            <Route path="/portfolio-sections/:category?" component={PortfolioSections} />
             <Route path="/interests/:category?" component={Interests} />
             <Route path="/SpillyGoose" component={SpillyGoose} />
             <Route path="/privacy" component={() => { window.location.replace('/public/privacy.html'); return null; }} />

@@ -5,7 +5,7 @@ import InterestCategories from './Interests/InterestCategories';
 import classNames from 'classnames';
 
 const SUBCATEGORIES = {
-  'portfolio': PortfolioCategories,
+  'portfolio-sections': PortfolioCategories,
   'interests': InterestCategories,
   'SpillyGoose': ['Game', 'Devlog'],
 }

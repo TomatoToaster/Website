@@ -13,16 +13,18 @@ const BACKGROUND_URLS = [
   },
 ];
 const SPRITE_URLS = [
-  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Sprites/Cat/CurlyTailCat.gif', altText: 'Curly Tail Cat' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Sprites/Flower/DancingFlower.gif', altText: 'Dancing Flower' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/SpillyGoose/MarkIngPortrait.gif', altText: 'Mark Ing Portrait' },
 ]
 
 const SPRITE_URLS2 = [
-  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/FreazyPeazy/Peazy.gif', altText: 'Peazy' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/RainBee/BeeEater.gif', altText: 'Bee Eater (a bird)' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/CatCopyPaste/PJ.gif', altText: 'PJ from Cat Copy Paste' },
   { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Whole/RainBee/Bee.gif', altText: 'Bee' },
+]
+
+const SPRITE_URLS3 = [
+  { url: 'https://raw.githubusercontent.com/TomatoToaster/PixelArt/main/Sprites/Cat/CurlyTailCat.gif', altText: 'Curly Tail Cat' },
 ]
 const DigitalArtPiece = ({url, altText}) => (
   <img src={url} alt={altText} className="digital-art-piece" />
@@ -42,9 +44,6 @@ class Art extends Component {
         <h2>Pixel Art</h2>
         <p>I'm an amateur in the art stuff don't judge :)</p>
 
-        <a href={'https://github.com/TomatoToaster/PixelArt/tree/main/Sprites'} target='_blank'>
-          Check out some of the sprites I've been working on:
-        </a>
         <div className='pixel-sprites'>
           {SPRITE_URLS.map(DigitalArtPiece)}
         </div>
@@ -53,11 +52,13 @@ class Art extends Component {
           {SPRITE_URLS2.map(DigitalArtPiece)}
         </div>
 
-        <br/>
+        {/* <br />
+        <br />
+        <br />
+        <div className='pixel-sprites'>
+          {SPRITE_URLS3.map(DigitalArtPiece)}
+        </div> */}
 
-        <a href={'https://github.com/TomatoToaster/PixelArt/tree/main/Backgrounds'} target='_blank'>
-          Or some of the backgrounds:
-        </a>
         <div className='pixel-backgrounds'>
           {BACKGROUND_URLS.map(ResizableDigitalArtPiece)}
         </div>

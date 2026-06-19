@@ -45,7 +45,7 @@ class TomatoHome extends Component {
       <Fragment>
         <PromoButton
           href="https://tomatotoaster.itch.io/web-developer"
-          imgSrc="/public/WebDeveloper/WebDeveloperLogo.png"
+          imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
           imgAlt="Web Developer"
           badges={webDevBadges}
           position="left"
