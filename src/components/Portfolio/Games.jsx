@@ -21,7 +21,7 @@ class Games extends Component {
                 <h3 className='currently-working-header'>Currently Working On</h3>
                 <div className='currently-working-on'>
                     <GifButton
-                        href="https://github.com/TomatoToaster/WebDeveloper"
+                        href="https://tomatotoaster.itch.io/web-developer"
                         imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
                         imgAlt="Web Developer"
                         badges={webDevBadges}

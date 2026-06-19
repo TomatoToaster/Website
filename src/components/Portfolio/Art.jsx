@@ -42,7 +42,7 @@ class Art extends Component {
     return (
       <Fragment>
         <h2>Pixel Art</h2>
-        <p>I'm an amateur in the art stuff don't judge :)</p>
+        {/* <p>I'm an amateur in the art stuff don't judge :)</p> */}
 
         <div className='pixel-sprites'>
           {SPRITE_URLS.map(DigitalArtPiece)}
