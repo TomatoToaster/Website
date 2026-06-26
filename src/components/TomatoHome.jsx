@@ -49,20 +49,22 @@ class TomatoHome extends Component {
   render() {
     return (
       <Fragment>
-        <PromoButton
-          href="https://tomatotoaster.itch.io/web-developer"
-          imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
-          imgAlt="Web Developer"
-          badges={webDevBadges}
-          position="left"
-        />
-        <PromoButton
-          href="https://tomatotoaster.itch.io/rotorton-jones"
-          imgSrc="/public/RotortonJones/RotortonJonesLogoAnimated.gif"
-          imgAlt="Rotorton Jones"
-          badges={rjBadges}
-          position="center"
-        />
+        <div className="promo-left-stack">
+          <PromoButton
+            href="https://tomatotoaster.itch.io/web-developer"
+            imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
+            imgAlt="Web Developer"
+            badges={webDevBadges}
+            position="left"
+          />
+          <PromoButton
+            href="https://tomatotoaster.itch.io/rotorton-jones"
+            imgSrc="/public/RotortonJones/RotortonJonesLogoAnimated.gif"
+            imgAlt="Rotorton Jones"
+            badges={rjBadges}
+            position="left"
+          />
+        </div>
         <PromoButton
           to="/SpillyGoose"
           imgSrc="/public/SpillyGoose/SpillyGooseLogoWebsite.png"
