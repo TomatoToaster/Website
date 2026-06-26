@@ -373,8 +373,9 @@ p {
   gap: 0.5em;
   z-index: 100;
 
-  &--right { right: 1.5em; }
-  &--left  { left: 1.5em; }
+  &--right  { right: 1.5em; }
+  &--left   { left: 1.5em; }
+  &--center { left: 0; right: 0; width: fit-content; margin: 0 auto; }
 
   &__badges {
     display: flex;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GifButton from '../GifButton';
-import { AppleIcon, AndroidIcon, DesktopIcon, HTML5Icon } from '../PlatformIcons';
+import { AppleIcon, AndroidIcon, DesktopIcon, MobileIcon, HTML5Icon } from '../PlatformIcons';
 
 const sgBadges = [
   { icon: <AppleIcon />, label: 'iOS',     tooltip: 'iOS app' },
@@ -10,6 +10,12 @@ const sgBadges = [
 const webDevBadges = [
   { icon: <DesktopIcon />, label: 'PC',    tooltip: 'Play on PC' },
   { icon: <HTML5Icon />,   label: 'HTML5', tooltip: 'Play in browser' },
+];
+
+const rjBadges = [
+  { icon: <DesktopIcon />, label: 'PC',     tooltip: 'Play on PC' },
+  { icon: <MobileIcon />,  label: 'Mobile', tooltip: 'Play on mobile' },
+  { icon: <HTML5Icon />,   label: 'HTML5',  tooltip: 'Play in browser' },
 ];
 
 class Games extends Component {
@@ -25,6 +31,12 @@ class Games extends Component {
                         imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
                         imgAlt="Web Developer"
                         badges={webDevBadges}
+                    />
+                    <GifButton
+                        href="https://tomatotoaster.itch.io/rotorton-jones"
+                        imgSrc="/public/RotortonJones/RotortonJonesLogoAnimated.gif"
+                        imgAlt="Rotorton Jones"
+                        badges={rjBadges}
                     />
                     <GifButton
                         to="/SpillyGoose"
