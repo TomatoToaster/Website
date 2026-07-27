@@ -45,6 +45,11 @@ const rjBadges = [
   { icon: <HTML5Icon />,   label: 'HTML5',  tooltip: 'Play in browser' },
 ];
 
+const pgBadges = [
+  { icon: <DesktopIcon />, label: 'PC',    tooltip: 'Play on PC' },
+  { icon: <HTML5Icon />,   label: 'HTML5', tooltip: 'Play in browser' },
+];
+
 class TomatoHome extends Component {
   render() {
     return (
@@ -65,13 +70,22 @@ class TomatoHome extends Component {
             position="left"
           />
         </div>
-        <PromoButton
-          to="/SpillyGoose"
-          imgSrc="/public/SpillyGoose/SpillyGooseLogoWebsite.png"
-          imgAlt="Spilly Goose"
-          badges={sgBadges}
-          position="right"
-        />
+        <div className="promo-right-stack">
+          <PromoButton
+            href="https://tomatotoaster.itch.io/papogato"
+            imgSrc="/public/PapoGato/PapoGatoLogoAnimated.gif"
+            imgAlt="Papo Gato"
+            badges={pgBadges}
+            position="right"
+          />
+          <PromoButton
+            to="/SpillyGoose"
+            imgSrc="/public/SpillyGoose/SpillyGooseLogoWebsite.png"
+            imgAlt="Spilly Goose"
+            badges={sgBadges}
+            position="right"
+          />
+        </div>
         <div className="tomato">
           <div className="menu">
             <NavButton navName="/about" buttonContent="About Me" imgName="profile-card.png" colorClassName='color1' />

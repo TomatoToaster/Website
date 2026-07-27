@@ -18,6 +18,11 @@ const rjBadges = [
   { icon: <HTML5Icon />,   label: 'HTML5',  tooltip: 'Play in browser' },
 ];
 
+const pgBadges = [
+  { icon: <DesktopIcon />, label: 'PC',    tooltip: 'Play on PC' },
+  { icon: <HTML5Icon />,   label: 'HTML5', tooltip: 'Play in browser' },
+];
+
 class Games extends Component {
     render() {
         return (
@@ -31,6 +36,12 @@ class Games extends Component {
                         imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
                         imgAlt="Web Developer"
                         badges={webDevBadges}
+                    />
+                    <GifButton
+                        href="https://tomatotoaster.itch.io/papogato"
+                        imgSrc="/public/PapoGato/PapoGatoLogoAnimated.gif"
+                        imgAlt="Papo Gato"
+                        badges={pgBadges}
                     />
                     <GifButton
                         href="https://tomatotoaster.itch.io/rotorton-jones"
