@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GifButton from '../GifButton';
-import { AppleIcon, AndroidIcon, DesktopIcon, MobileIcon, HTML5Icon } from '../PlatformIcons';
+import { AppleIcon, AndroidIcon, DesktopIcon, HTML5Icon } from '../PlatformIcons';
 
 const sgBadges = [
   { icon: <AppleIcon />, label: 'iOS',     tooltip: 'iOS app' },
@@ -10,12 +10,6 @@ const sgBadges = [
 const webDevBadges = [
   { icon: <DesktopIcon />, label: 'PC',    tooltip: 'Play on PC' },
   { icon: <HTML5Icon />,   label: 'HTML5', tooltip: 'Play in browser' },
-];
-
-const rjBadges = [
-  { icon: <DesktopIcon />, label: 'PC',     tooltip: 'Play on PC' },
-  { icon: <MobileIcon />,  label: 'Mobile', tooltip: 'Play on mobile' },
-  { icon: <HTML5Icon />,   label: 'HTML5',  tooltip: 'Play in browser' },
 ];
 
 const pgBadges = [
@@ -32,22 +26,16 @@ class Games extends Component {
                 <h3 className='currently-working-header'>Currently Working On</h3>
                 <div className='currently-working-on'>
                     <GifButton
-                        href="https://tomatotoaster.itch.io/web-developer"
-                        imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
-                        imgAlt="Web Developer"
-                        badges={webDevBadges}
-                    />
-                    <GifButton
                         href="https://tomatotoaster.itch.io/papogato"
                         imgSrc="/public/PapoGato/PapoGatoLogoAnimated.gif"
                         imgAlt="Papo Gato"
                         badges={pgBadges}
                     />
                     <GifButton
-                        href="https://tomatotoaster.itch.io/rotorton-jones"
-                        imgSrc="/public/RotortonJones/RotortonJonesLogoAnimated.gif"
-                        imgAlt="Rotorton Jones"
-                        badges={rjBadges}
+                        href="https://tomatotoaster.itch.io/web-developer"
+                        imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
+                        imgAlt="Web Developer"
+                        badges={webDevBadges}
                     />
                     <GifButton
                         to="/SpillyGoose"
@@ -59,6 +47,7 @@ class Games extends Component {
 
                 <h3 className='games-section-header'>Also on my <a href={'https://tomatotoaster.itch.io'}>itch.io</a></h3>
                 <div className='game-preview'>
+                    <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/4698558?bg_color=ab947a&amp;border_color=c7dcd0&amp;fg_color=2e222f&amp;link_color=ae2334"><a href="https://tomatotoaster.itch.io/rotorton-jones">Rotorton Jones by TomatoToaster</a></iframe></p>
                     <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/3110297?bg_color=7d7071&amp;fg_color=302c2e&amp;link_color=e6482e&amp;border_color=615973"><a href="https://tomatotoaster.itch.io/rainbee">Rainbee (Demo) by TomatoToaster</a></iframe></p>
                     <p>
                     <iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/1654950?dark=true"><a href="https://tomatotoaster.itch.io/stardustin">Stardustin by TomatoToaster</a></iframe>

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import PromoButton from './PromoButton';
-import { AppleIcon, AndroidIcon, DesktopIcon, MobileIcon, HTML5Icon } from './PlatformIcons';
+import { AppleIcon, AndroidIcon, DesktopIcon, HTML5Icon } from './PlatformIcons';
 
 const NavButton = ({navName, buttonContent, imgName, colorClassName='color0'}) => (
   <NavLink to={navName}>
@@ -39,12 +39,6 @@ const webDevBadges = [
   { icon: <HTML5Icon />,   label: 'HTML5', tooltip: 'Play in browser' },
 ];
 
-const rjBadges = [
-  { icon: <DesktopIcon />, label: 'PC',     tooltip: 'Play on PC' },
-  { icon: <MobileIcon />,  label: 'Mobile', tooltip: 'Play on mobile' },
-  { icon: <HTML5Icon />,   label: 'HTML5',  tooltip: 'Play in browser' },
-];
-
 const pgBadges = [
   { icon: <DesktopIcon />, label: 'PC',    tooltip: 'Play on PC' },
   { icon: <HTML5Icon />,   label: 'HTML5', tooltip: 'Play in browser' },
@@ -63,29 +57,20 @@ class TomatoHome extends Component {
             position="left"
           />
           <PromoButton
-            href="https://tomatotoaster.itch.io/rotorton-jones"
-            imgSrc="/public/RotortonJones/RotortonJonesLogoAnimated.gif"
-            imgAlt="Rotorton Jones"
-            badges={rjBadges}
-            position="left"
-          />
-        </div>
-        <div className="promo-right-stack">
-          <PromoButton
             href="https://tomatotoaster.itch.io/papogato"
             imgSrc="/public/PapoGato/PapoGatoLogoAnimated.gif"
             imgAlt="Papo Gato"
             badges={pgBadges}
-            position="right"
-          />
-          <PromoButton
-            to="/SpillyGoose"
-            imgSrc="/public/SpillyGoose/SpillyGooseLogoWebsite.png"
-            imgAlt="Spilly Goose"
-            badges={sgBadges}
-            position="right"
+            position="left"
           />
         </div>
+        <PromoButton
+          to="/SpillyGoose"
+          imgSrc="/public/SpillyGoose/SpillyGooseLogoWebsite.png"
+          imgAlt="Spilly Goose"
+          badges={sgBadges}
+          position="right"
+        />
         <div className="tomato">
           <div className="menu">
             <NavButton navName="/about" buttonContent="About Me" imgName="profile-card.png" colorClassName='color1' />
