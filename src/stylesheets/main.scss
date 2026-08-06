@@ -311,8 +311,6 @@ p {
 .currently-working-header {
   color: $color1;
   text-align: center;
-  border-top: 2px solid $color1;
-  border-bottom: 2px solid $color1;
   padding: 8px 24px;
   margin: 16px auto;
   width: max-content;
@@ -322,10 +320,8 @@ p {
 .games-section-header {
   color: $PaletteLightGray;
   text-align: center;
-  border-top: 2px solid $PaletteGray;
-  border-bottom: 2px solid $PaletteGray;
   padding: 8px 24px;
-  margin: 16px auto;
+  margin: 48px auto 16px;
   width: max-content;
 }
 

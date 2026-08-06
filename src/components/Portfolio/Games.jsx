@@ -45,7 +45,7 @@ class Games extends Component {
                     />
                 </div>
 
-                <h3 className='games-section-header'>Also on my <a href={'https://tomatotoaster.itch.io'}>itch.io</a></h3>
+                <h3 className='games-section-header'>Check out my <a href={'https://tomatotoaster.itch.io'}>itch.io page</a></h3>
                 <div className='game-preview'>
                     <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/4698558?bg_color=ab947a&amp;border_color=c7dcd0&amp;fg_color=2e222f&amp;link_color=ae2334"><a href="https://tomatotoaster.itch.io/rotorton-jones">Rotorton Jones by TomatoToaster</a></iframe></p>
                     <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/3110297?bg_color=7d7071&amp;fg_color=302c2e&amp;link_color=e6482e&amp;border_color=615973"><a href="https://tomatotoaster.itch.io/rainbee">Rainbee (Demo) by TomatoToaster</a></iframe></p>
