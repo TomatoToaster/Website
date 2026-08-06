@@ -947,6 +947,13 @@ p {
     width: 240px;
   }
 
+  .currently-working-header,
+  .games-section-header {
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   /* rules for digital artwork pieces */
   .big-digital-art-piece {
     display: none;
