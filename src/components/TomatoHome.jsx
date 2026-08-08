@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import PromoButton from './PromoButton';
-import { AppleIcon, AndroidIcon, DesktopIcon, HTML5Icon } from './PlatformIcons';
+import { AppleIcon, AndroidIcon, DesktopIcon, HTML5Icon, MobileIcon } from './PlatformIcons';
 
 const NavButton = ({navName, buttonContent, imgName, colorClassName='color0'}) => (
   <NavLink to={navName}>
@@ -41,6 +41,7 @@ const webDevBadges = [
 
 const pgBadges = [
   { icon: <DesktopIcon />, label: 'PC',    tooltip: 'Play on PC' },
+  { icon: <MobileIcon />,  label: 'Mobile', tooltip: 'Play on mobile' },
   { icon: <HTML5Icon />,   label: 'HTML5', tooltip: 'Play in browser' },
 ];
 
@@ -50,17 +51,17 @@ class TomatoHome extends Component {
       <Fragment>
         <div className="promo-left-stack">
           <PromoButton
-            href="https://tomatotoaster.itch.io/web-developer"
-            imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
-            imgAlt="Web Developer"
-            badges={webDevBadges}
-            position="left"
-          />
-          <PromoButton
             href="https://tomatotoaster.itch.io/papogato"
             imgSrc="/public/PapoGato/PapoGatoLogoAnimated.gif"
             imgAlt="Papo Gato"
             badges={pgBadges}
+            position="left"
+          />
+          <PromoButton
+            href="https://tomatotoaster.itch.io/web-developer"
+            imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
+            imgAlt="Web Developer"
+            badges={webDevBadges}
             position="left"
           />
         </div>

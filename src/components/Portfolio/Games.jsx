@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GifButton from '../GifButton';
-import { AppleIcon, AndroidIcon, DesktopIcon, HTML5Icon } from '../PlatformIcons';
+import { AppleIcon, AndroidIcon, DesktopIcon, HTML5Icon, MobileIcon } from '../PlatformIcons';
 
 const sgBadges = [
   { icon: <AppleIcon />, label: 'iOS',     tooltip: 'iOS app' },
@@ -14,6 +14,7 @@ const webDevBadges = [
 
 const pgBadges = [
   { icon: <DesktopIcon />, label: 'PC',    tooltip: 'Play on PC' },
+  { icon: <MobileIcon />,  label: 'Mobile', tooltip: 'Play on mobile' },
   { icon: <HTML5Icon />,   label: 'HTML5', tooltip: 'Play in browser' },
 ];
 
