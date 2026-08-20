@@ -7,7 +7,8 @@ import classNames from 'classnames';
 const SUBCATEGORIES = {
   'portfolio-sections': PortfolioCategories,
   'interests': InterestCategories,
-  'SpillyGoose': ['Game', 'Devlog'],
+  // 'SpillyGoose': ['Game', 'Devlog'],
+  'SpillyGoose': ['Game'],
 }
 
 const NavBarMenuItem = (subtopicName) => (name, currentSubcategory) => (
