@@ -2,13 +2,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BadgeList } from './GifButton';
 
-const PromoButton = ({ to, href, imgSrc, imgAlt, badges = [], position = 'right', badgeColor }) => {
+const PromoButton = ({ to, href, imgSrc, imgAlt, badges = [], position = 'right', badgeColor, bright = false }) => {
   const btn = (
     <div className="promo-button__btn">
       <img
         src={imgSrc}
         alt={imgAlt}
-        className="promo-button__img"
+        className={'promo-button__img' + (bright ? ' promo-button__img--bright' : '')}
         onError={e => {
           e.target.style.display = 'none';
           e.target.nextSibling.style.display = 'block';

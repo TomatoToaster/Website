@@ -59,6 +59,7 @@ class TomatoHome extends Component {
           imgAlt="Spilly Goose"
           badges={sgBadges}
           position="right"
+          bright
         />
         <div className="tomato">
           <div className="menu">

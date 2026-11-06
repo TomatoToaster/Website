@@ -432,8 +432,9 @@ p {
     width: auto;
     height: 160px;
     image-rendering: pixelated;
-    filter: brightness(1.25);
     display: block;
+
+    &--bright { filter: brightness(1.25); }
   }
 
   &__label {

@@ -43,6 +43,7 @@ class Games extends Component {
                         imgSrc="/public/SpillyGoose/SpillyGooseLogoWebsite.png"
                         imgAlt="Spilly Goose"
                         badges={sgBadges}
+                        bright
                     />
                 </div>
 

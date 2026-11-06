@@ -19,13 +19,13 @@ export const BadgeList = ({ badges = [], color }) => {
   );
 };
 
-const GifButton = ({ to, href, imgSrc, imgAlt, badges = [] }) => {
+const GifButton = ({ to, href, imgSrc, imgAlt, badges = [], bright = false }) => {
   const btn = (
     <div className="gif-button__btn">
       <img
         src={imgSrc}
         alt={imgAlt}
-        className="promo-button__img"
+        className={'promo-button__img' + (bright ? ' promo-button__img--bright' : '')}
         onError={e => {
           e.target.style.display = 'none';
           e.target.nextSibling.style.display = 'block';
