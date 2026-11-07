@@ -7,7 +7,7 @@ import Lightbox from './Lightbox';
 
 const IOS_APP_STORE_URL = null; // Add iOS App Store URL here when ready
 const GOOGLE_PLAY_URL = null;   // Add Google Play URL here when ready
-const VIDEO_URL = null;         // Add gameplay video URL here when ready
+const YOUTUBE_VIDEO_ID = 'Kc8BzPhC1-M'; // Unlisted YouTube Short of gameplay
 
 const IOS_TESTER_URL = 'https://tally.so/r/jaMr8a';
 const ANDROID_TESTER_URL = 'https://tally.so/r/lbAjGB';
@@ -80,18 +80,24 @@ const Screenshot = ({ index }) => {
 };
 
 const VideoSection = () => {
-  const [open, setOpen] = useState(false);
-
-  if (VIDEO_URL) {
+  if (YOUTUBE_VIDEO_ID) {
+    const params = new URLSearchParams({
+      rel: '0',
+      modestbranding: '1',
+      playsinline: '1',
+      loop: '1',
+      playlist: YOUTUBE_VIDEO_ID,
+    });
     return (
-      <div
-        className='sg-video-placeholder sg-screenshot--clickable'
-        onClick={() => setOpen(true)}
-      >
-        <span>Gameplay Video</span>
-        <Lightbox open={open} onClose={() => setOpen(false)}>
-          <video src={VIDEO_URL} controls autoPlay />
-        </Lightbox>
+      <div className='sg-video'>
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?${params}`}
+          title='Spilly Goose gameplay video'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          referrerPolicy='strict-origin-when-cross-origin'
+          allowFullScreen
+          loading='lazy'
+        />
       </div>
     );
   }
