@@ -17,6 +17,8 @@ const config = {
   performance: {
     maxAssetSize: 350000,
     maxEntrypointSize: 350000,
+    // Only size-check the JS/CSS bundle; static files copied from public/ load on demand
+    assetFilter: (assetFilename) => /\.(js|css)$/.test(assetFilename),
   },
   mode: 'production',
   module: {
