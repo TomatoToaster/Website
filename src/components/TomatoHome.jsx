@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import PromoButton from './PromoButton';
-import { AppleIcon, AndroidIcon, DesktopIcon, HTML5Icon, MobileIcon } from './PlatformIcons';
+import { DesktopIcon, HTML5Icon, MobileIcon } from './PlatformIcons';
 
 const NavButton = ({navName, buttonContent, imgName, colorClassName='color0'}) => (
   <NavLink to={navName}>
@@ -29,9 +29,9 @@ const OpenLinkButton = ({link, buttonContent, imgName, colorClassName='color0'})
   </a>
 );
 
-const sgBadges = [
-  { icon: <AppleIcon />,   label: 'iOS',     tooltip: 'iOS app' },
-  { icon: <AndroidIcon />, label: 'Android', tooltip: 'Android app' },
+const webDevBadges = [
+  { icon: <DesktopIcon />, label: 'PC',    tooltip: 'Play on PC' },
+  { icon: <HTML5Icon />,   label: 'HTML5', tooltip: 'Play in browser' },
 ];
 
 const pgBadges = [
@@ -54,12 +54,11 @@ class TomatoHome extends Component {
           />
         </div>
         <PromoButton
-          to="/SpillyGoose"
-          imgSrc="/public/SpillyGoose/SpillyGooseLogoWebsite.png"
-          imgAlt="Spilly Goose"
-          badges={sgBadges}
+          href="https://tomatotoaster.itch.io/web-developer"
+          imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
+          imgAlt="Web Developer"
+          badges={webDevBadges}
           position="right"
-          bright
         />
         <div className="tomato">
           <div className="menu">

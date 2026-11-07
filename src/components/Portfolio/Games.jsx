@@ -24,48 +24,59 @@ class Games extends Component {
             <>
                 <h2>Video Games</h2>
 
-                <h3 className='currently-working-header'>Currently Working On</h3>
-                <div className='currently-working-on'>
-                    <GifButton
-                        href="https://tomatotoaster.itch.io/papogato"
-                        imgSrc="/public/PapoGato/PapoGatoLogoAnimated.gif"
-                        imgAlt="Papo Gato"
-                        badges={pgBadges}
-                    />
-                    <GifButton
-                        href="https://tomatotoaster.itch.io/web-developer"
-                        imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
-                        imgAlt="Web Developer"
-                        badges={webDevBadges}
-                    />
-                    <GifButton
-                        to="/SpillyGoose"
-                        imgSrc="/public/SpillyGoose/SpillyGooseLogoWebsite.png"
-                        imgAlt="Spilly Goose"
-                        badges={sgBadges}
-                        bright
-                    />
-                </div>
+                <section className='games-group games-group--current'>
+                    <h3 className='games-group__header'>Currently Working On</h3>
+                    <div className='games-group__buttons'>
+                        <GifButton
+                            href="https://tomatotoaster.itch.io/papogato"
+                            imgSrc="/public/PapoGato/PapoGatoLogoAnimated.gif"
+                            imgAlt="Papo Gato"
+                            badges={pgBadges}
+                        />
+                    </div>
+                </section>
 
-                <h3 className='games-section-header'>Check out my <a href={'https://tomatotoaster.itch.io'}>itch.io page</a></h3>
-                <div className='game-preview'>
-                    <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/4698558?bg_color=ab947a&amp;border_color=c7dcd0&amp;fg_color=2e222f&amp;link_color=ae2334"><a href="https://tomatotoaster.itch.io/rotorton-jones">Rotorton Jones by TomatoToaster</a></iframe></p>
-                    <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/3110297?bg_color=7d7071&amp;fg_color=302c2e&amp;link_color=e6482e&amp;border_color=615973"><a href="https://tomatotoaster.itch.io/rainbee">Rainbee (Demo) by TomatoToaster</a></iframe></p>
-                    <p>
-                    <iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/1654950?dark=true"><a href="https://tomatotoaster.itch.io/stardustin">Stardustin by TomatoToaster</a></iframe>
-                    </p>
-                    {/*
-                    <p>
-                    <iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/2160954?dark=true"><a href="https://tomatotoaster.itch.io/fishing-boots">Fishing Boots by TomatoToaster</a></iframe>
-                    </p>
-                    */}
-                    <p>
-                    Or try this game that I've hosted on my website by clicking below:
-                    </p>
-                    <a href={'https://onetwo.tomatotoaster.com'} target='_blank'>
-                        <img src='https://raw.githubusercontent.com/TomatoToaster/OneTwo/master/Game_Preview.png' className='game-preview-image' />
-                    </a>
-                </div>
+                <section className='games-group'>
+                    <h3 className='games-group__header'>On Hiatus</h3>
+                    <div className='games-group__buttons'>
+                        <GifButton
+                            href="https://tomatotoaster.itch.io/web-developer"
+                            imgSrc="/public/WebDeveloper/WebDeveloperAnimatedLogo.gif"
+                            imgAlt="Web Developer"
+                            badges={webDevBadges}
+                        />
+                        <GifButton
+                            to="/SpillyGoose"
+                            imgSrc="/public/SpillyGoose/SpillyGooseLogoWebsite.png"
+                            imgAlt="Spilly Goose"
+                            badges={sgBadges}
+                            bright
+                        />
+                    </div>
+                    <p className='games-group__note'>(Hey, if you wanna buy one of these, I'll keep working on it)</p>
+                </section>
+
+                <section className='games-group'>
+                    <h3 className='games-group__header'>Check out my other games on my <a href={'https://tomatotoaster.itch.io'}>itch.io page</a></h3>
+                    <div className='game-preview'>
+                        <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/4698558?bg_color=ab947a&amp;border_color=c7dcd0&amp;fg_color=2e222f&amp;link_color=ae2334"><a href="https://tomatotoaster.itch.io/rotorton-jones">Rotorton Jones by TomatoToaster</a></iframe></p>
+                        <p><iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/3110297?bg_color=7d7071&amp;fg_color=302c2e&amp;link_color=e6482e&amp;border_color=615973"><a href="https://tomatotoaster.itch.io/rainbee">Rainbee (Demo) by TomatoToaster</a></iframe></p>
+                        <p>
+                        <iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/1654950?dark=true"><a href="https://tomatotoaster.itch.io/stardustin">Stardustin by TomatoToaster</a></iframe>
+                        </p>
+                        {/*
+                        <p>
+                        <iframe className='itchFrame' width="552" height="167" frameBorder="0" src="https://itch.io/embed/2160954?dark=true"><a href="https://tomatotoaster.itch.io/fishing-boots">Fishing Boots by TomatoToaster</a></iframe>
+                        </p>
+                        */}
+                        <p>
+                        Or try this game that I've hosted on my website by clicking below:
+                        </p>
+                        <a href={'https://onetwo.tomatotoaster.com'} target='_blank'>
+                            <img src='https://raw.githubusercontent.com/TomatoToaster/OneTwo/master/Game_Preview.png' className='game-preview-image' />
+                        </a>
+                    </div>
+                </section>
             </>
         );
     }

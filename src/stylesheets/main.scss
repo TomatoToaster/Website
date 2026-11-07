@@ -308,31 +308,47 @@ p {
   padding: 5em 0;
 }
 
-.currently-working-header {
-  color: $color1;
-  text-align: center;
-  padding: 8px 24px;
-  margin: 16px auto;
-  width: max-content;
-}
+/* Video Games page: Currently Working On / On Hiatus / itch.io groups */
+.games-group {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  box-sizing: border-box;
 
+  // Chunky pixel-style divider between groups
+  & + & {
+    border-top: 4px dashed $PaletteGray;
+  }
 
-.games-section-header {
-  color: $PaletteLightGray;
-  text-align: center;
-  padding: 8px 24px;
-  margin: 48px auto 16px;
-  width: max-content;
-}
+  &__header {
+    color: $PaletteLightGray;
+    text-align: center;
+    margin: 0 0 24px;
+  }
 
-.currently-working-on {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 24px;
-  padding: 10px;
-  flex-wrap: wrap;
+  &--current {
+    padding-top: 16px;
+  }
+
+  &--current &__header {
+    color: $color1;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__note {
+    color: $PaletteLightGray;
+    opacity: 0.75;
+    text-align: center;
+    font-size: 0.8em;
+    margin: 24px 0 0;
+  }
 }
 
 .gif-button {
@@ -965,11 +981,9 @@ p {
     width: 240px;
   }
 
-  .currently-working-header,
-  .games-section-header {
-    width: auto;
-    max-width: 100%;
-    box-sizing: border-box;
+  .games-group {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* rules for digital artwork pieces */
